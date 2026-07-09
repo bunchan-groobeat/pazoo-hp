@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* =========================================================
+   CarShop Pazoo テーマトークン上書き（base.css の後に読み込む）
+   中古車店 = 信頼感重視。ディープネイビーを主軸に、
+   電話CTAには従来ブランドの赤を残す。
+   ※ 配色トーンは【社長確認】。別案として「赤主軸（従来踏襲）」も可。
+   ========================================================= */
+:root{
+  --accent:#1f4e79;      /* 主アクセント（ボタン/ホバー/見出しEN）＝信頼のネイビー */
+  --accent-2:#c8102e;    /* 電話CTA等の強調＝ブランドレッド（従来色を継承） */
+  --base:#20303f;        /* 本文・濃色（ネイビーチャコール） */
+  --panel:#eef2f6;       /* 淡色面（帯・フッター背景） */
+  --line:#d7dee6;        /* 罫線 */
+  --muted:#7a8794;       /* 補助テキスト */
+}
+
+/* ロゴは横長（342x106）。中央配置時に大きすぎないよう調整 */
+#logo_image img{ width:180px; }
+@media (max-width:820px){ #logo_image img{ width:auto; height:34px; } }
+
+/* トップ スライダーに軽いキャッチコピーを重ねる（任意演出） */
+#top_slider{ position:relative; }
+.hero_catch{
+  position:absolute; left:0; right:0; top:50%; transform:translateY(-50%);
+  text-align:center; color:#fff; z-index:5; text-shadow:0 2px 12px rgba(0,0,0,.55);
+  pointer-events:none;
+}
+.hero_catch .en{ display:block; font-size:14px; letter-spacing:.28em; font-weight:bold; margin:0 0 10px; }
+.hero_catch .main{ font-size:34px; font-weight:bold; font-family:var(--mincho); line-height:1.5; }
+.hero_catch .sub{ display:block; font-size:15px; margin-top:12px; font-weight:bold; }
+@media (max-width:820px){
+  .hero_catch .main{ font-size:19px; } .hero_catch .en{ font-size:11px; }
+  .hero_catch .sub{ font-size:12px; margin-top:6px; }
+}
+
+/* SPスライダーにも重ねられるよう相対配置 */
+#sp_slider{ position:relative; }
+
+/* 在庫CTA（goo-net）を目立たせる差し色ボタン */
+.link_button.stock{ background:var(--accent-2); }
+.link_button.stock:hover{ background:var(--base); }
+
+/* お知らせ・情報の軽い余白調整 */
+.lead.center{ text-align:center; }
+.section.narrow{ max-width:900px; }
+
+/* サービス下層：料金・注記テーブルの軽装飾（info_table流用可） */
+.note_box{
+  background:var(--panel); border-left:4px solid var(--accent);
+  padding:20px 24px; margin:30px 0; font-size:14px; line-height:2;
+}
+.note_box .label{ font-weight:bold; color:var(--accent); }
+
+/* 【社長確認】マークを本文中で視認しやすく */
+.check{
+  display:inline-block; background:#fff4d6; color:#8a6d00; border:1px solid #e6cf7a;
+  font-size:12px; font-weight:bold; padding:1px 8px; border-radius:3px; margin:0 2px;
+  white-space:nowrap;
+}
