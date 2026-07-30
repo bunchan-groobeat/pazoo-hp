@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 2026-07-30 ルイージ作成。★GitHub Pagesプロジェクトページのため Google Search Console でこのsitemap URLを直接送信すること(robots.txt経由の自動発見はサブパスでは効かない)。★push=公開反映は社長承認後(2026-07-30時点 未push)。 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://bunchan-groobeat.github.io/pazoo-hp/</loc><lastmod>2026-07-30</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://bunchan-groobeat.github.io/pazoo-hp/maintenance.html</loc><lastmod>2026-07-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bunchan-groobeat.github.io/pazoo-hp/repair-paint.html</loc><lastmod>2026-07-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bunchan-groobeat.github.io/pazoo-hp/coating.html</loc><lastmod>2026-07-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bunchan-groobeat.github.io/pazoo-hp/order.html</loc><lastmod>2026-07-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bunchan-groobeat.github.io/pazoo-hp/order-insurance.html</loc><lastmod>2026-07-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://bunchan-groobeat.github.io/pazoo-hp/companyoutline.html</loc><lastmod>2026-07-30</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://bunchan-groobeat.github.io/pazoo-hp/contact.html</loc><lastmod>2026-07-30</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://bunchan-groobeat.github.io/pazoo-hp/privacy.html</loc><lastmod>2026-07-30</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>
