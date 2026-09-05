@@ -5,3 +5,9 @@ assets/img/collected/
 # OS/エディタ
 Thumbs.db
 .DS_Store
+
+# 自動生成（build_pazoo.js で作り直せる・1.8MB）
+demo/artifact_pazoo.html
+# 作業中の退避
+demo/*.bak
+demo/*.bak_*
