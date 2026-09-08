@@ -625,3 +625,7 @@ details p{margin:12px 0 0 33px;font-size:14.5px;color:var(--ink-sub)}
   .cform dl{grid-template-columns:1fr}
   .cform dt{padding-bottom:0}
 }
+
+/* 口コミを全10件に増やしたので、3列が単調にならないよう2件ごとに幅を変える（2026-09-09） */
+.vcard.wide{grid-column:span 2}
+@media(max-width:900px){.vcard.wide{grid-column:auto}}
