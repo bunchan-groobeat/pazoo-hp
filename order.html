@@ -6,8 +6,10 @@
 <meta name="robots" content="noindex,nofollow"><!-- STAGING-NOINDEX 2026-09-09 入れ替え公開時に削除 -->
 <title>注文販売・買取 | CarShop Pazoo（福島県須賀川市）</title>
 <meta name="description" content="CarShop Pazoo の注文販売・買取。福島県須賀川市でご希望の一台をお探しする注文販売、お乗り換え・ご不要なお車の買取を承ります。マイカーローンもご相談ください。">
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/theme.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="assets/css/pazoo-2609.css">
 
 <!-- ▼ SEO強化(head内追加のみ) 2026-07-30 ルイージ -->
 <link rel="canonical" href="https://bunchan-groobeat.github.io/pazoo-hp/order.html">
@@ -45,96 +47,136 @@
 </head>
 <body>
 
-<header id="header">
-  <div id="header_inner">
-    <div id="logo_image"><a href="index.html"><img src="assets/img/logo.webp" alt="CarShop Pazoo（カーショップ パズー）" width="180"></a></div>
-    <input type="checkbox" id="nav_toggle">
-    <label class="nav_toggle_btn" for="nav_toggle" aria-label="メニュー"><span></span></label>
-    <nav class="global_menu">
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="maintenance.html">車検・整備</a></li>
-        <li><a href="repair-paint.html">板金・塗装</a></li>
-        <li><a href="coating.html">コーティング</a></li>
-        <li><a href="order.html">注文販売・買取</a>
-          <ul><li><a href="order-insurance.html">マイカーローン</a></li></ul>
-        </li>
-        <li><a href="https://www.ms-ins.com/" target="_blank" rel="noopener">自動車保険</a></li>
-        <li><a href="companyoutline.html">会社概要</a>
-          <ul><li><a href="privacy.html">プライバシーポリシー</a></li></ul>
-        </li>
-        <li><a href="contact.html">お問い合わせ</a></li>
-        <li><a href="https://www.goo-net.com/usedcar_shop/0902905/showroom.html" target="_blank" rel="noopener">在庫を見る</a></li>
-      </ul>
+<svg class="ico-defs" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24"><path d="M9.5 5C6.4 6.6 4.5 9.4 4.5 12.6V19h6.2v-6.4H7.6c0-2 .9-3.6 2.7-4.6zM19.5 5c-3.1 1.6-5 4.4-5 7.6V19h6.2v-6.4h-3.1c0-2 .9-3.6 2.7-4.6z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.3-.5.2-.9.4-1.2.8-.4.3-.6.7-.8 1.2-.1.4-.3 1-.3 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.3 2.1.2.5.4.9.8 1.2.3.4.7.6 1.2.8.4.1 1 .3 2.1.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.3.5-.2.9-.4 1.2-.8.4-.3.6-.7.8-1.2.1-.4.3-1 .3-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.3-2.1-.2-.5-.4-.9-.8-1.2-.3-.4-.7-.6-1.2-.8-.4-.1-1-.3-2.1-.3-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 1.8a3.1 3.1 0 100 6.2 3.1 3.1 0 000-6.2zm5.1-3.2a1.15 1.15 0 110 2.3 1.15 1.15 0 010-2.3z"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M5 11l1.5-4h11L19 11h1.5v6H18a2 2 0 11-4 0h-4a2 2 0 11-4 0H3.5v-6H5zm2.2-.5h9.6L15.9 8.5H8.1z"/></symbol>
+</svg>
+
+<header class="hd">
+  <div class="wrap">
+    <div class="logo">
+      <img id="logo" alt="Pazoo CAR SHOP" hidden>
+      <span class="txt" id="logoTxt">Pazoo</span>
+      <span class="brandtxt"><small>CAR SHOP</small>Pazoo</span>
+    </div>
+    <nav>
+      <a href="index.html#stock">Stock</a>
+      <a href="index.html#service">Service</a>
+      <a href="order-insurance.html">Insurance</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="companyoutline.html">Company</a>
     </nav>
+    <div class="cta">
+      <a class="line" href="#">LINEで相談</a>
+      <a class="tel" href="tel:0248762077">0248-76-2077<small>10:00-19:00／火曜定休</small></a>
+      <button type="button" class="menu" id="menuBtn" aria-controls="drawer" aria-expanded="false" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
+<nav class="drawer" id="drawer" aria-label="メニュー">
+  <a href="index.html#stock">Stock<small>いまある車</small></a>
+  <a href="index.html#service">Service<small>買う。探す。直す。守る。</small></a>
+  <a href="index.html#insurance">Insurance<small>事故にあわれたら</small></a>
+  <a href="index.html#voice">Voice<small>お客様の声</small></a>
+  <a href="index.html#faq">FAQ<small>よくあるご質問</small></a>
+  <a href="index.html#contact">Contact<small>お問い合わせ</small></a>
+  <a href="index.html#insta">Instagram<small>@carshoppazoo</small></a>
+  <a href="index.html#company">Company<small>会社概要</small></a>
+  <div class="drawer-cta"><a class="line" href="#">LINEで相談</a><a class="tel" href="tel:0248762077">0248-76-2077</a></div>
+</nav>
 
-<div id="main_image3"><h1>注文販売・買取</h1></div>
-<div class="container"><p class="breadcrumb"><a href="index.html">HOME</a> ＞ 注文販売・買取</p></div>
-
-<section class="section narrow">
-  <p class="lead center">「こんな車を探している」「今の車を手放したい」——どちらもCarShop Pazoo にお任せください。<br>在庫にないお車もお探しする注文販売、そしてお乗り換え・ご不要になったお車の買取を承ります。</p>
-
-  <div class="feature_row" style="margin-top:60px;">
-    <div class="ft_text">
-      <p class="en">ORDER SALES</p>
-      <h2 class="headline">注文販売（お探しします）</h2>
-      <p class="desc">ご希望の車種・年式・カラー・ご予算をお伺いし、全国のネットワークからお客様にぴったりの一台をお探しします。「在庫一覧に載っていない車が欲しい」という方もお気軽にご相談ください。</p>
-      <p class="desc">現在の在庫は <a href="https://www.goo-net.com/usedcar_shop/0902905/showroom.html" target="_blank" rel="noopener">goo-net の在庫一覧</a> からご覧いただけます。</p>
-    </div>
-    <div class="ft_image"><div class="img_placeholder">展示車・店舗の写真（素材待ち）<br><span class="check">【社長確認】</span> 掲載写真をご用意ください</div></div>
-  </div>
-
-  <div class="feature_row reverse">
-    <div class="ft_text">
-      <p class="en">PURCHASE</p>
-      <h2 class="headline">買取</h2>
-      <p class="desc">お乗り換えやご不要になったお車の買取も行っています。JAAA査定士が在籍しており、お車の状態を丁寧に確認して査定いたします。まずはお気軽にお問い合わせください。</p>
-      <p class="desc"><span class="check">【社長確認】</span> 買取査定の申込方法・出張査定の可否・必要書類など、実際の流れをご指示ください。</p>
-    </div>
-    <div class="ft_image"><div class="img_placeholder">査定・商談の写真（素材待ち）<br><span class="check">【社長確認】</span> 掲載写真をご用意ください</div></div>
-  </div>
-
-  <div class="note_box">
-    お支払い方法として<a href="order-insurance.html">マイカーローン</a>もご利用いただけます。あわせて<a href="https://www.ms-ins.com/" target="_blank" rel="noopener">自動車保険</a>のご相談も承ります。<br>
-    <span class="check">【社長確認】</span> 保証・アフターサービス・納車までの日数など、掲載したい条件がありましたらご指示ください。
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Service</p>
+    <h1>Order and Purchase<span class="ja">注文販売・買取</span></h1>
+    <p class="crumb"><a href="index.html">Home</a> / 注文販売・買取</p>
   </div>
 </section>
 
-<section class="cta_band">
-  <p class="cta_head">お車のご購入・買取のご相談はこちら</p>
-  <p class="cta_sub">ご希望・ご予算に合わせてご提案します</p>
-  <div class="cta_actions">
-    <a class="tel_button" href="tel:0248-76-2077"><span><span class="tel_sub">お電話でのお問い合わせ（10:00〜19:00 / 火曜定休）</span><span class="tel_num">0248-76-2077</span></span></a>
-    <a class="link_button stock" href="https://www.goo-net.com/usedcar_shop/0902905/showroom.html" target="_blank" rel="noopener">在庫一覧を見る（goo-net）</a>
+<section class="sub">
+  <div class="wrap">
+    <p class="lead">「こんな車を探している」「今の車を手放したい」。どちらもお任せください。在庫にないお車もお探しする注文販売と、お乗り換え・ご不要になったお車の買取を承ります。</p>
+    <div class="row">
+  <div class="row-txt"><h3><small>Order Sales</small>お探しします</h3><p>ご希望の車種・年式・カラー・ご予算をうかがい、全国のオークションとネットワークから探します。「こんなジムニーが欲しい」だけで大丈夫です。年式やグレードの違いからご説明します。</p><p>いまの在庫は <a href="https://www.goo-net.com/usedcar_shop/0902905/showroom.html" target="_blank" rel="noopener">goo-net の在庫一覧</a> からご覧いただけます。</p></div>
+  <div class="row-img"><div class="ph">展示車・店舗の写真<br>［素材待ち］</div></div>
+</div>
+    <div class="row flip">
+  <div class="row-txt"><h3><small>Purchase</small>買取します</h3><p>日本自動車査定協会（JAAA）の査定士が在籍しています。その場で状態を確認してお見積りします。買い替えなら次の一台と合わせてご相談ください。</p><p>出張査定の可否・必要書類・査定の申込方法 <span class="todo">要確認</span></p></div>
+  <div class="row-img"><div class="ph">査定・商談の写真<br>［素材待ち］</div></div>
+</div>
+    <div class="note">お支払いは <a href="order-insurance.html">マイカーローン</a> もご利用いただけます。あわせて自動車保険のご相談も承ります。<br><span class="todo">保証・アフターサービス・納車までの日数 要確認</span></div>
   </div>
 </section>
-
-<footer>
-  <div id="footer_top"><div id="footer_top_inner">
-    <div id="footer_logo_image"><img src="assets/img/logo.webp" alt="CarShop Pazoo" width="180"></div>
-    <p id="footer_info">〒962-0061 福島県須賀川市北山寺町318<br>TEL 0248-76-2077 ／ FAX 0248-94-5080<br>営業時間 10:00〜19:00（火曜定休）</p>
-    <ul id="footer_menu_list">
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="maintenance.html">車検・整備</a></li>
-      <li><a href="repair-paint.html">板金・塗装</a></li>
-      <li><a href="coating.html">カーコーティング</a></li>
-      <li><a href="order.html">注文販売・買取</a></li>
-      <li><a href="order-insurance.html">マイカーローン</a></li>
-      <li><a href="companyoutline.html">会社概要</a></li>
-      <li><a href="privacy.html">プライバシーポリシー</a></li>
-      <li><a href="contact.html">お問い合わせ</a></li>
-      <li><a href="https://www.goo-net.com/usedcar_shop/0902905/showroom.html" target="_blank" rel="noopener">在庫一覧（goo-net）</a></li>
-    </ul>
-    <div id="footer_social">
-      <a href="https://www.instagram.com/carshoppazoo/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.facebook.com/%E3%82%AB%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97-%E3%83%91%E3%82%BA%E3%83%BC-512649325471960/" target="_blank" rel="noopener">Facebook</a>
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Contact<span class="ja">お探しの一台・買取のご相談</span></h2>
+    <div class="acts">
+      <a class="b-tel" href="tel:0248762077">0248-76-2077<small>10:00-19:00／火曜定休</small></a>
+      <a class="b-form" href="contact.html">お問い合わせフォーム</a>
     </div>
-  </div></div>
-  <div id="footer_bottom"><p id="copyright">&copy; CarShop Pazoo All Rights Reserved.</p></div>
+  </div>
+</section>
+<footer class="ft">
+  <div class="wrap ft-inner">
+    <div class="f-brand">
+      <div class="ftlogo"><img id="logoFt" alt="Pazoo CAR SHOP" hidden><b id="logoFtTxt">Pazoo</b><span class="brandtxt"><small>CAR SHOP</small>Pazoo</span></div>
+      <p class="f-tagline">四駆と旧車が好きでやっている店です。買ったあとの車検・整備・板金塗装、保険まで、ぜんぶ同じ店で引き受けます。</p>
+    </div>
+
+    <nav class="f-nav" aria-label="フッターメニュー">
+      <p class="f-label">Menu</p>
+      <a href="index.html#stock">いまある車</a>
+      <a href="index.html#service">サービス</a>
+      <a href="index.html#insurance">事故にあわれたら</a>
+      <a href="index.html#voice">お客様の声</a>
+      <a href="index.html#faq">よくあるご質問</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="index.html#insta">Instagram</a>
+      <a href="companyoutline.html">会社概要</a>
+    </nav>
+
+    <nav class="f-nav" aria-label="取り扱いメニュー">
+      <p class="f-label">Service</p>
+      <a href="order.html">中古車販売</a>
+      <a href="order.html">買取・下取り</a>
+      <a href="order.html">注文販売（お探しします）</a>
+      <a href="maintenance.html">車検・整備</a>
+      <a href="repair-paint.html">板金・塗装</a>
+      <a href="coating.html">コーティング</a>
+      <a href="order-insurance.html">自動車保険</a>
+    </nav>
+
+    <div class="f-info">
+      <p class="f-label">Shop</p>
+      <p class="f-address">
+        株式会社FIFTY&#39;S<br>
+        〒962-0061 福島県須賀川市北山寺町318<br>
+        国道4号沿い・須賀川インターから5分<br>
+        <a href="tel:0248762077">0248-76-2077</a>（FAX 0248-94-5080）<br>
+        10:00〜19:00／火曜定休<br>
+        東北運輸局長 認証工場 4-7761
+      </p>
+      <p class="f-sns">
+        <a href="https://www.instagram.com/carshoppazoo" target="_blank" rel="noopener">Instagram</a>
+        <a href="#">LINE <span class="todo">URL 要確認</span></a>
+      </p>
+    </div>
+  </div>
+
+  <div class="wrap ft-bottom">
+    <span>&copy; Pazoo CAR SHOP／株式会社FIFTY&#39;S</span>
+    <a href="privacy.html">プライバシーポリシー</a>
+  </div>
 </footer>
-<a id="return_top" href="#" aria-label="ページ上部へ戻る">↑</a>
-<script src="assets/js/site.js"></script>
+
+<div class="fixbar">
+  <a class="fx-tel" href="tel:0248762077"><small>お電話</small>0248-76-2077</a>
+  <a class="fx-line" href="#">LINEで相談</a>
+</div>
+
+
+<script src="assets/js/pazoo-2609.js" defer></script>
 </body>
 </html>

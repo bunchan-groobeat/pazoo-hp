@@ -6,8 +6,10 @@
 <meta name="robots" content="noindex,nofollow"><!-- STAGING-NOINDEX 2026-09-09 入れ替え公開時に削除 -->
 <title>CarShop Pazoo | 福島県須賀川市の中古車販売・買取・車検・整備・板金塗装</title>
 <meta name="description" content="福島県須賀川市の中古車販売・買取なら CarShop Pazoo（カーショップ パズー）。車検・整備、板金・塗装、カーコーティング、マイカーローン、自動車保険まで、クルマのことはなんでもお任せください。">
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/theme.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="assets/css/pazoo-2609.css">
 
 <!-- ▼ SEO強化(head内追加のみ・既存の見た目/機能に不触) 2026-07-30 ルイージ追加 ─ 水野谷方式の横展開 =========
      ★NAP要社長確認（確認取れ次第この注記を外す。Pazooは2026-07-30時点で社長未確認）:
@@ -73,155 +75,370 @@
 </head>
 <body>
 
-<header id="header">
-  <div id="header_inner">
-    <div id="logo_image"><a href="index.html"><img src="assets/img/logo.webp" alt="CarShop Pazoo（カーショップ パズー）" width="180"></a></div>
-    <input type="checkbox" id="nav_toggle">
-    <label class="nav_toggle_btn" for="nav_toggle" aria-label="メニュー"><span></span></label>
-    <nav class="global_menu">
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="maintenance.html">車検・整備</a></li>
-        <li><a href="repair-paint.html">板金・塗装</a></li>
-        <li><a href="coating.html">コーティング</a></li>
-        <li><a href="order.html">注文販売・買取</a>
-          <ul><li><a href="order-insurance.html">マイカーローン</a></li></ul>
-        </li>
-        <li><a href="https://www.ms-ins.com/" target="_blank" rel="noopener">自動車保険</a></li>
-        <li><a href="companyoutline.html">会社概要</a>
-          <ul><li><a href="privacy.html">プライバシーポリシー</a></li></ul>
-        </li>
-        <li><a href="contact.html">お問い合わせ</a></li>
-        <li><a href="https://www.goo-net.com/usedcar_shop/0902905/showroom.html" target="_blank" rel="noopener">在庫を見る</a></li>
-      </ul>
+<svg class="ico-defs" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24"><path d="M9.5 5C6.4 6.6 4.5 9.4 4.5 12.6V19h6.2v-6.4H7.6c0-2 .9-3.6 2.7-4.6zM19.5 5c-3.1 1.6-5 4.4-5 7.6V19h6.2v-6.4h-3.1c0-2 .9-3.6 2.7-4.6z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.3-.5.2-.9.4-1.2.8-.4.3-.6.7-.8 1.2-.1.4-.3 1-.3 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.3 2.1.2.5.4.9.8 1.2.3.4.7.6 1.2.8.4.1 1 .3 2.1.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.3.5-.2.9-.4 1.2-.8.4-.3.6-.7.8-1.2.1-.4.3-1 .3-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.3-2.1-.2-.5-.4-.9-.8-1.2-.3-.4-.7-.6-1.2-.8-.4-.1-1-.3-2.1-.3-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 1.8a3.1 3.1 0 100 6.2 3.1 3.1 0 000-6.2zm5.1-3.2a1.15 1.15 0 110 2.3 1.15 1.15 0 010-2.3z"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M5 11l1.5-4h11L19 11h1.5v6H18a2 2 0 11-4 0h-4a2 2 0 11-4 0H3.5v-6H5zm2.2-.5h9.6L15.9 8.5H8.1z"/></symbol>
+</svg>
+
+<header class="hd">
+  <div class="wrap">
+    <div class="logo">
+      <img id="logo" alt="Pazoo CAR SHOP" hidden>
+      <span class="txt" id="logoTxt">Pazoo</span>
+      <span class="brandtxt"><small>CAR SHOP</small>Pazoo</span>
+    </div>
+    <nav>
+      <a href="#stock">Stock</a>
+      <a href="#service">Service</a>
+      <a href="order-insurance.html">Insurance</a>
+      <a href="#faq">FAQ</a>
+      <a href="companyoutline.html">Company</a>
     </nav>
+    <div class="cta">
+      <a class="line" href="#">LINEで相談</a>
+      <a class="tel" href="tel:0248762077">0248-76-2077<small>10:00-19:00／火曜定休</small></a>
+      <button type="button" class="menu" id="menuBtn" aria-controls="drawer" aria-expanded="false" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
+<!-- 3本線メニューの中身。ヘッダー（sticky＋backdrop-filter）の中に置くと position:fixed の基準がヘッダーになって出ないので、外に置く -->
+<nav class="drawer" id="drawer" aria-label="メニュー">
+  <a href="#stock">Stock<small>いまある車</small></a>
+  <a href="#service">Service<small>買う。探す。直す。守る。</small></a>
+  <a href="#insurance">Insurance<small>事故にあわれたら</small></a>
+  <a href="#voice">Voice<small>お客様の声</small></a>
+  <a href="#faq">FAQ<small>よくあるご質問</small></a>
+  <a href="#contact">Contact<small>お問い合わせ</small></a>
+  <a href="#insta">Instagram<small>@carshoppazoo</small></a>
+  <a href="#company">Company<small>会社概要</small></a>
+  <div class="drawer-cta"><a class="line" href="#">LINEで相談</a><a class="tel" href="tel:0248762077">0248-76-2077</a></div>
+</nav>
 
-<!-- メインスライダー（PC） -->
-<div id="top_slider">
-  <div class="slides">
-    <div class="slide"><img src="assets/img/main/mv1.webp" alt="CarShop Pazoo 店舗・在庫車" width="1600" height="505"></div>
-    <div class="slide"><img src="assets/img/main/mv2.webp" alt="須賀川市の中古車販売・買取" width="1600" height="505"></div>
-    <div class="slide"><img src="assets/img/main/mv3.webp" alt="車検・整備・板金塗装も対応" width="1600" height="505"></div>
+<div class="hero">
+  <div class="bg" id="hbg">
+    <img class="slide on p-front" src="assets/img/main/mv-jb64-front.webp" alt="店の前に停めたジムニー（JB64・グレー）">
+    <img class="slide" src="assets/img/main/mv1.webp" alt="Pazoo 店舗外観と展示車">
+    <img class="slide" src="assets/img/main/mv2.webp" alt="展示車の並び">
+    <img class="slide" src="assets/img/main/mv3.webp" alt="店内の待合スペース">
+    <img class="slide" src="assets/img/main/mv4.webp" alt="仕上がったお車">
   </div>
-  <div class="hero_catch">
-    <span class="en">CAR SHOP PAZOO</span>
-    <span class="main">クルマのことは、なんでもパズーへ。</span>
-    <span class="sub">福島県須賀川市｜販売・買取・車検・整備・板金・塗装・コーティング</span>
-  </div>
-  <div class="slider_dots" aria-hidden="true"></div>
+  <p class="hero-copy">
+    <span class="l1">ジムニー買うなら、</span>
+    <span class="l2">Pazoo<i>.</i></span>
+  </p>
 </div>
-<!-- メインスライダー（スマホ） -->
-<div id="sp_slider">
-  <div class="slides">
-    <div class="slide"><img src="assets/img/main/mv1.webp" alt="CarShop Pazoo 店舗・在庫車" width="1600" height="505"></div>
-    <div class="slide"><img src="assets/img/main/mv2.webp" alt="須賀川市の中古車販売・買取" width="1600" height="505"></div>
-    <div class="slide"><img src="assets/img/main/mv3.webp" alt="車検・整備・板金塗装も対応" width="1600" height="505"></div>
-  </div>
-  <div class="hero_catch">
-    <span class="en">CAR SHOP PAZOO</span>
-    <span class="main">クルマのことは、<br>なんでもパズーへ。</span>
-  </div>
-</div>
+<div class="wrap"><div class="bars" id="bars" role="tablist" aria-label="トップ写真の切り替え">
+  <button type="button" class="on" data-i="0" aria-label="1枚目"><span></span></button>
+  <button type="button" data-i="1" aria-label="2枚目"><span></span></button>
+  <button type="button" data-i="2" aria-label="3枚目"><span></span></button>
+  <button type="button" data-i="3" aria-label="4枚目"><span></span></button>
+  <button type="button" data-i="4" aria-label="5枚目"><span></span></button>
+</div></div>
 
-<!-- 在庫導線を最上部に（中古車店の最優先動線） -->
-<section class="cta_band">
-  <p class="cta_head">在庫車をお探しですか？</p>
-  <p class="cta_sub">最新の在庫は goo-net（グーネット）でご覧いただけます。気になるお車はお気軽にお問い合わせください。</p>
-  <div class="cta_actions">
-    <a class="link_button stock" href="https://www.goo-net.com/usedcar_shop/0902905/showroom.html" target="_blank" rel="noopener">在庫一覧を見る（goo-net）</a>
-    <a class="tel_button" href="tel:0248-76-2077"><span><span class="tel_sub">お電話でのお問い合わせ</span><span class="tel_num">0248-76-2077</span></span></a>
-  </div>
-</section>
-
-<!-- 淡色帯：お店紹介 -->
-<div class="index_band">
-  <div class="band_inner">
-    <div class="band_text">
-      <p class="headline">須賀川のカーライフを、<br>まるごとサポート。</p>
-      <p class="desc">CarShop Pazoo は、福島県須賀川市の中古車販売店です。良質な中古車の販売・買取はもちろん、車検・整備、板金・塗装、カーコーティング、マイカーローンや自動車保険のご相談まで、クルマにまつわることをワンストップでお引き受けします。ご購入後も末永くお付き合いいただける、地域のかかりつけショップを目指しています。</p>
-      <a class="link_button accent" href="companyoutline.html">お店について</a>
+<section class="intro">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div class="intro-txt">
+    <p class="big anime"><span class="ani_txt"><span>JIMNY &amp;</span></span><br><span class="ani_txt w1"><span><em>CLASSIC 4WD</em></span></span></p>
+    <p class="anime ani_slideup d1">四駆と旧車が好きでやっている店です。ジムニーは常に何台か置いていますし、アメ車の旧いのも扱います。買っていただいたあとの車検・整備・板金塗装、それに保険まで、ぜんぶ同じ店で。場所は須賀川市北山寺町、国道4号沿いで、須賀川インターから5分です。</p>
+    <blockquote class="owner anime ani_fade d2">
+      <p><span class="todo">店主のひとこと 素材待ち</span> ここには店主様が話した言葉を、整えずにそのまま載せます。確認シートの⑨でお願いしている一言が届き次第、差し替えます。</p>
+      <cite>— 店主</cite>
+    </blockquote>
+        <a class="stock-link anime ani_fade d2" href="#stock">いまある車を見る</a>
+      </div>
+      <div class="intro-car anime ani_drivein">
+        <img src="assets/img/main/jimny-cutout.webp" width="1388" height="1018" alt="Pazooで扱う旧型ジムニー。リフトアップして大径タイヤを履いたワインレッドの一台">
+        <p class="cap"><span class="todo">要確認</span> 車種名・年式</p>
+      </div>
     </div>
-    <div class="band_image"><img src="assets/img/main/mv2.webp" alt="CarShop Pazoo の店舗" width="1600" height="505"></div>
-  </div>
-</div>
-
-<!-- サービス一覧 -->
-<section class="section">
-  <div class="section_head"><span class="en">SERVICE</span><h2 class="ja">サービス案内</h2></div>
-  <div class="service_grid">
-    <a class="service_card" href="maintenance.html">
-      <span class="thumb"><img src="assets/img/service/maintenance.webp" alt="車検・整備"></span>
-      <span class="body"><span class="title">車検・整備</span>
-        <span class="text">法定車検から日常のメンテナンス、故障診断まで。安心してお乗りいただくための点検・整備を行います。</span>
-        <span class="more">詳しく見る →</span></span>
-    </a>
-    <a class="service_card" href="repair-paint.html">
-      <span class="thumb"><img src="assets/img/service/repair.webp" alt="板金・塗装"></span>
-      <span class="body"><span class="title">板金・塗装</span>
-        <span class="text">キズ・ヘコミの修理から事故車の修復まで。丁寧な板金・塗装で愛車をきれいに仕上げます。</span>
-        <span class="more">詳しく見る →</span></span>
-    </a>
-    <a class="service_card" href="coating.html">
-      <span class="thumb"><img src="assets/img/service/coating.webp" alt="カーコーティング"></span>
-      <span class="body"><span class="title">カーコーティング</span>
-        <span class="text">ボディを美しく保ち、汚れや紫外線から守るコーティング。輝きと保護を長く維持します。</span>
-        <span class="more">詳しく見る →</span></span>
-    </a>
-    <a class="service_card" href="order.html">
-      <span class="thumb"><img src="assets/img/service/order.webp" alt="注文販売・買取"></span>
-      <span class="body"><span class="title">注文販売・買取</span>
-        <span class="text">ご希望の一台をお探しする注文販売、今のお車の買取もお任せください。マイカーローンもご相談いただけます。</span>
-        <span class="more">詳しく見る →</span></span>
-    </a>
+    <!-- 「社内確認用のデザイン案です」の枠は外した（社長 2026-09-04「マル枠ない外し」）。
+         noindex は <head> に入っているので検索には出ない。要確認の印そのものは残す。 -->
   </div>
 </section>
 
-<!-- お知らせ -->
-<section class="section" style="padding-top:0;">
-  <div class="section_head"><span class="en">NEWS</span><h2 class="ja">お知らせ</h2></div>
-  <ul class="news_list" style="max-width:820px;margin:0 auto;">
-    <li><span class="date">最新情報</span><span class="title">最新の在庫情報は <a href="https://www.goo-net.com/usedcar_shop/0902905/showroom.html" target="_blank" rel="noopener">goo-net の在庫一覧</a> と <a href="https://www.instagram.com/carshoppazoo/" target="_blank" rel="noopener">Instagram（@carshoppazoo）</a> で随時更新中です。</span></li>
-    <li><span class="date">お知らせ</span><span class="title">お問い合わせは <a href="contact.html">お問い合わせフォーム</a>、またはお電話（0248-76-2077）で承っております。</span></li>
-    <li><span class="date"><span class="check">【社長確認】</span></span><span class="title">掲載する新着情報・キャンペーン等がありましたらご指示ください（サンプルのため仮の項目を表示しています）。</span></li>
-  </ul>
-</section>
-
-<!-- CTA帯（電話＋在庫） -->
-<section class="cta_band">
-  <p class="cta_head">お気軽にお問い合わせください</p>
-  <p class="cta_sub">在庫・お見積り・車検・整備・買取のご相談を承ります</p>
-  <div class="cta_actions">
-    <a class="tel_button" href="tel:0248-76-2077"><span><span class="tel_sub">お電話でのお問い合わせ（10:00〜19:00 / 火曜定休）</span><span class="tel_num">0248-76-2077</span></span></a>
-    <a class="link_button accent" href="https://www.goo-net.com/usedcar_shop/0902905/showroom.html" target="_blank" rel="noopener">在庫一覧を見る（goo-net）</a>
-  </div>
-</section>
-
-<footer>
-  <div id="footer_top"><div id="footer_top_inner">
-    <div id="footer_logo_image"><img src="assets/img/logo.webp" alt="CarShop Pazoo" width="180"></div>
-    <p id="footer_info">〒962-0061 福島県須賀川市北山寺町318<br>TEL 0248-76-2077 ／ FAX 0248-94-5080<br>営業時間 10:00〜19:00（火曜定休）</p>
-    <ul id="footer_menu_list">
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="maintenance.html">車検・整備</a></li>
-      <li><a href="repair-paint.html">板金・塗装</a></li>
-      <li><a href="coating.html">カーコーティング</a></li>
-      <li><a href="order.html">注文販売・買取</a></li>
-      <li><a href="order-insurance.html">マイカーローン</a></li>
-      <li><a href="companyoutline.html">会社概要</a></li>
-      <li><a href="privacy.html">プライバシーポリシー</a></li>
-      <li><a href="contact.html">お問い合わせ</a></li>
-      <li><a href="https://www.goo-net.com/usedcar_shop/0902905/showroom.html" target="_blank" rel="noopener">在庫一覧（goo-net）</a></li>
-    </ul>
-    <div id="footer_social">
-      <a href="https://www.instagram.com/carshoppazoo/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.facebook.com/%E3%82%AB%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97-%E3%83%91%E3%82%BA%E3%83%BC-512649325471960/" target="_blank" rel="noopener">Facebook</a>
+<section id="stock">
+  <div class="wrap">
+    <div class="stock-head">
+      <div>
+        <p class="eyebrow anime ani_fade">In Stock</p>
+        <h2 class="h2 anime"><span class="ani_txt w1"><span>Stock</span></span></h2><!-- 和文の添え字「いまある車」は外した（社長 2026-09-05） -->
+      </div>
+      <span class="updated">UPDATED <span id="upd">2026.09.02</span></span>
     </div>
-  </div></div>
-  <div id="footer_bottom"><p id="copyright">&copy; CarShop Pazoo All Rights Reserved.</p></div>
+    <p class="lead anime ani_slideup d1">ここに載っているのは、いまある車の一部です。ジムニーは切らさないようにしていますが、載せきれていない車もあります。気になる一台があれば、LINEか電話でお尋ねください。国道4号沿い、須賀川インターから5分。寄っていただければ、残りもまとめてご覧いただけます。写真を押すと詳しいページが開きます。</p>
+    <div class="railbox anime ani_slideup d2">
+      <div class="rail" id="rail" tabindex="0" aria-label="在庫一覧（横にスクロールします）"></div>
+      <button type="button" class="rail-hint" id="railHint" aria-label="在庫を次へ送る">→</button>
+    </div>
+    <div class="railctl anime ani_fade d2">
+      <button type="button" id="prev" aria-label="前へ">←</button>
+      <button type="button" id="next" aria-label="次へ">→</button>
+    </div>
+    <p class="note">
+      <span id="updNote">2026-09-02</span> 時点の在庫です（店主様の許諾を得て掲載）。<br>
+      写真は本番までに自社サーバーへ移します。最終更新から48時間を過ぎると、この欄は自動で表示を止めます。
+    </p>
+  </div>
+</section>
+
+<section id="service" class="dark">
+  <div class="wrap">
+    <p class="eyebrow anime ani_fade">What We Do</p>
+    <h2 class="h2 anime"><span class="ani_txt w1"><span>Service</span></span><span class="ja ani_fade d2">買う。探す。直す。守る。</span></h2>
+    <p class="lead anime ani_slideup d1">売って終わりにはしません。車検も整備も板金も、買っていただいた店でそのまま引き受けます。よそで買った車も同じです。</p>
+    <div class="grid g2 anime ani_slideup d1">
+      <div class="cell">
+        <p class="no">01 — Order</p>
+        <h3>お探しします</h3>
+        <p>在庫にないお車も、全国のオークションとネットワークから探します。「こんなジムニーが欲しい」だけで大丈夫です。年式やグレードの違いからご説明します。</p>
+              <p class="more"><a href="order.html">注文販売・買取のページへ</a></p>
+      </div>
+      <div class="cell">
+        <p class="no">02 — Purchase</p>
+        <h3>買取します</h3>
+        <p>日本自動車査定協会（JAAA）の査定士が在籍しています。その場で状態を確認してお見積りします。買い替えなら次の一台と合わせてご相談ください。<span class="todo">出張査定・必要書類 要確認</span></p>
+              <p class="more"><a href="order.html">注文販売・買取のページへ</a></p>
+      </div>
+    </div>
+    <ol class="ledger anime ani_slideup d2">
+      <li><span class="no">03</span><div><h3>車検・整備<small>Inspection / Maintenance</small></h3><p>買っていただいた車も、他店で買った車も。認証工場で車検と点検をします。</p><p class="fact">東北運輸局長 認証工場 第4-7761号</p><p class="more"><a href="maintenance.html">車検・整備のページへ</a></p></div></li>
+      <li class="wide"><span class="no">04</span><div><h3>板金・塗装<small>Body &amp; Paint</small></h3><p>小さなキズ1か所から。保険を使って直すか、使わずに直すか。見積りを2通り出して、安く済むほうをお勧めします。</p><p class="more"><a href="repair-paint.html">板金・塗装のページへ</a></p></div><p class="fact">保険を使うと翌年から3等級ダウン。<br>修理代と保険料の差額まで、一緒に計算します。</p></li>
+      <li><span class="no">05</span><div><h3>コーティング<small>Coating</small></h3><p>洗車が楽になります。<span class="todo">ブランド・料金 要確認</span></p><p class="more"><a href="coating.html">コーティングのページへ</a></p></div></li>
+      <li class="wide"><span class="no">06</span><div><h3>自動車保険<small>Insurance</small></h3><p>保険の窓口も当店です。事故のあとに、保険会社と修理工場へ別々に電話しなくて済みます。</p><p class="more"><a href="order-insurance.html">マイカーローン・保険のページへ</a></p></div><p class="fact">取扱保険会社 三井住友海上<br>他社の保険でも修理はお受けします。</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="insurance" class="dark">
+  <div class="wrap">
+    <p class="eyebrow anime ani_fade">If You Had An Accident</p>
+    <h2 class="h2 anime"><span class="ani_txt w1"><span>Insurance</span></span><span class="ja ani_fade d2">事故にあわれたら</span></h2>
+    <p class="lead anime ani_slideup d1">保険の窓口も修理も、当店でできます。「保険会社に工場を案内されたけど、そこに出さないとダメなの？」——これがいちばん多いご質問です。</p>
+    <div class="pin anime ani_slideup d1">
+      <h3>修理する工場は、ご自分で選べます</h3>
+      <p>保険を使う場合でも、修理をどこに頼むかはお客様が決められます。案内された工場に出す義務はありません。迷われたら、まずお電話ください。保険会社とのやりとりも当店でお手伝いします。</p>
+    </div>
+    <ol class="flow anime ani_slideup d2">
+      <li><div><h4>まず安全の確保と警察へ</h4><p>けが人の有無を確認し、警察に連絡してください。その後で構いませんので当店へお電話を。</p></div></li>
+      <li><div><h4>保険会社へご連絡</h4><p>ご加入が当店ならそのままお任せください。他社の保険でも修理はお受けできます。</p></div></li>
+      <li><div><h4>お車を確認・お見積り</h4><p>レッカーが必要な場合もご相談ください。代車をご用意します。</p></div></li>
+      <li><div><h4>修理・お引き渡し</h4><p>保険の手続きと修理の進み具合を、まとめてご連絡します。</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="voice">
+  <div class="wrap">
+    <p class="eyebrow anime ani_fade">Reviews</p>
+    <h2 class="h2 anime"><span class="ani_txt w1"><span>Voice</span></span><span class="ja ani_fade d2">お客様の声</span></h2>
+    <p class="lead anime ani_slideup d1">グーネットに10件いただいています。手を入れず、書かれたまま載せました。</p>
+
+    <div class="scorebar anime ani_fade d1">
+      <div class="sh">
+        <b>5.0</b>
+        <span class="stars"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+        <span class="shcap">レビュー総合／10件</span>
+      </div>
+      <ul class="scores">
+        <li><span class="stars sm"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span><b>5.0</b><span>説明のわかりやすさ</span></li>
+        <li><span class="stars sm"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span><b>5.0</b><span>納車までの対応</span></li>
+        <li><span class="stars sm"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span><b>5.0</b><span>おすすめ度</span></li>
+        <li><span class="stars sm"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st half" aria-hidden="true"><use href="#i-star"/></svg></span><b>4.9</b><span>お問い合わせ（見積り）</span></li>
+      </ul>
+    </div>
+
+    <div class="voices anime ani_slideup d1">
+      <article class="vcard feat">
+        <svg class="qmark" aria-hidden="true"><use href="#i-quote"/></svg>
+        <p class="vtext">希望の車に巡り合えて、お店の方の対応もとても親切で良かったです。長く大切に乗っていきます。ありがとうございました。</p>
+        <div class="vmeta">
+          <span class="avatar" aria-hidden="true">タ</span>
+          <span class="vwho"><b>タカハシさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>スズキ ジムニー</span></span>
+          <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+          <time>2019年6月</time>
+        </div>
+      </article>
+      <article class="vcard">
+        <svg class="qmark" aria-hidden="true"><use href="#i-quote"/></svg>
+        <p class="vtext">分かりやすい説明だったのでよく分からない自分でも安心して購入できました。ありがとうございました</p>
+        <div class="vmeta">
+          <span class="avatar" aria-hidden="true">M</span>
+          <span class="vwho"><b>MASSAOさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>スズキ ジムニー</span></span>
+          <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+          <time>2018年5月</time>
+        </div>
+      </article>
+      <article class="vcard">
+        <svg class="qmark" aria-hidden="true"><use href="#i-quote"/></svg>
+        <p class="vtext">知識の豊富な方が沢山いてよかったです。</p>
+        <div class="vmeta">
+          <span class="avatar" aria-hidden="true">イ</span>
+          <span class="vwho"><b>イチサムさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>トヨタ ハイラックスサーフ</span></span>
+          <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+          <time>2018年7月</time>
+        </div>
+      </article>
+      <article class="vcard">
+        <svg class="qmark" aria-hidden="true"><use href="#i-quote"/></svg>
+        <p class="vtext">見積もり対応がとても早く、その後の対応もとても迅速でした。車も綺麗な状態での納車でしたので新車を買ったのかと勘違えるところでした！本当にありがとうございました。</p>
+        <div class="vmeta">
+          <span class="avatar" aria-hidden="true">ミ</span>
+          <span class="vwho"><b>ミッチーサッチーさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>トヨタ アクア</span></span>
+          <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+          <time>2018年4月</time>
+        </div>
+      </article>
+    </div>
+
+    <p class="note anime ani_fade d2">2026-09-05 時点で10件。上は4件の抜粋です。<a href="https://www.goo-net.com/user_review/0902905/detail.html" target="_blank" rel="noopener">グーネットで全件を見る</a></p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <p class="eyebrow anime ani_fade">Questions</p>
+    <h2 class="h2 anime"><span class="ani_txt w1"><span>FAQ</span></span><span class="ja ani_fade d2">よくあるご質問</span></h2>
+    <details open class="anime ani_fade d1"><summary>ジムニーは在庫がありますか</summary><p>常に何台か置いています。年式もグレードもいろいろですので、お使いになる場面をお聞かせいただければ、合う一台をご提案します。いま無ければお探しします。</p></details>
+    <details class="anime ani_fade d2"><summary>在庫にない車も探してもらえますか</summary><p>お探しします。車種・年式・色・ご予算を伺い、全国のオークションとネットワークから探します。見つかり次第ご連絡します。</p></details>
+    <details class="anime ani_fade d3"><summary>今の車を下取りに出せますか</summary><p>できます。JAAAの査定士が在籍していますので、その場で状態を確認してお見積りします。</p></details>
+    <details class="anime ani_fade d3"><summary>ローンは使えますか</summary><p>ご利用いただけます。お支払い回数のご相談も承ります。アプラス・イオン・オリコ・ジャックス・セディナのオートローンをお取り扱いしています（50音順）。</p></details>
+    <details class="anime ani_fade d3"><summary>代車は借りられますか</summary><p>ご用意しています。台数に限りがありますので、お早めにご相談ください。<span class="todo">無料か 要確認</span></p></details>
+    <details class="anime ani_fade d3"><summary>保険を使うと、等級はどうなりますか</summary><p>車両保険を使って修理すると、翌年から3等級下がるのが一般的です。修理代と保険料の増額を比べて、使わないほうが安く済む場合もあります。どちらが得か、当店で一緒に計算できます。</p></details>
+    <details class="anime ani_fade d3"><summary>他店で買った車、他社の保険でも修理できますか</summary><p>できます。どちらでお車を買われたか、どの保険会社かは問いません。</p></details>
+    <details class="anime ani_fade d3"><summary>事故のあと、まず何をすればいいですか</summary><p>安全を確保して警察へご連絡ください。そのあとで当店にお電話いただければ、保険の手続きから修理まで順番にご案内します。</p></details>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <p class="eyebrow anime ani_fade">Get In Touch</p>
+    <h2 class="h2 anime"><span class="ani_txt w1"><span>Contact</span></span><span class="ja ani_fade d2">お問い合わせ</span></h2>
+    <p class="lead anime ani_slideup d1">「この車、まだありますか？」の一言で大丈夫です。下取りの相場でも、車検の時期の相談でも構いません。電話は10時から19時まで、火曜だけ休みです。</p>
+    <div class="ct anime ani_slideup d1">
+      <a href="#">
+        <span class="k">Line</span>
+        <span class="v line-v">LINEで相談</span>
+        <span class="s">友だち追加して、そのままチャットで。お車の写真を送っていただくだけでもお見積りできます<br><span class="todo">LINE公式アカウントのURL 要確認</span></span>
+      </a>
+      <a href="tel:0248762077">
+        <span class="k">Tel</span>
+        <span class="v">0248-76-2077</span>
+        <span class="s">10:00〜19:00／火曜定休</span>
+      </a>
+      <a href="https://www.instagram.com/carshoppazoo" target="_blank" rel="noopener">
+        <span class="k"><svg class="ic-ig" aria-hidden="true"><use href="#i-ig"/></svg>Instagram</span>
+        <span class="v ig-v">@carshoppazoo</span>
+        <span class="s">入ってきた車や、仕上がった車を載せています</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="insta">
+  <div class="wrap">
+    <p class="eyebrow anime ani_fade">Instagram</p>
+    <h2 class="h2 anime"><span class="ani_txt w1"><span>Instagram</span></span><span class="ja ani_fade d2">@carshoppazoo</span></h2>
+    <p class="lead anime ani_slideup d1">入ってきた車や、仕上がった車を載せています。在庫に出す前の一台が先に出ることもあります。</p>
+    <div class="igfeed anime ani_fade d1" id="igfeed">
+      <p class="igwait"><span class="todo">Instagram連携 未設定</span> Behold の Feed ID を入れると、ここに最新の投稿が自動で並びます（手順＝<b>Instagram連携_手順案内_LINE用.md</b>）。</p>
+    </div>
+    <p class="maplinks anime ani_fade d2">
+      <a href="https://www.instagram.com/carshoppazoo" target="_blank" rel="noopener">Instagramで見る</a>
+    </p>
+  </div>
+</section>
+
+<section id="company">
+  <div class="wrap">
+    <p class="eyebrow anime ani_fade">About Us</p>
+    <h2 class="h2 anime"><span class="ani_txt w1"><span>Company</span></span><span class="ja ani_fade d2">会社概要</span></h2>
+    <table class="info anime ani_slideup d1">
+      <tr><th>店名</th><td>CAR SHOP Pazoo（カーショップ パズー）</td></tr>
+      <tr><th>会社名</th><td>株式会社FIFTY&#39;S</td></tr>
+      <tr><th>所在地</th><td>〒962-0061 福島県須賀川市北山寺町318（国道4号沿い・須賀川IC5分）</td></tr>
+      <tr><th>電話／FAX</th><td>0248-76-2077／0248-94-5080</td></tr>
+      <tr><th>営業時間</th><td>10:00〜19:00／火曜定休</td></tr>
+      <tr><th>認証</th><td>東北運輸局長 認証工場 4-7761／古物商 251090001093</td></tr>
+      <tr><th>事業内容</th><td>中古車販売・買取／注文販売／車検・整備／板金塗装／コーティング／自動車保険代理店<span class="todo">レンタカー 要確認</span></td></tr>
+      <tr><th>スタッフ</th><td><span class="todo">人数 要確認</span></td></tr>
+    </table>
+
+    <div class="mapbox anime ani_fade d2">
+      <iframe title="CAR SHOP Pazoo の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=%E7%A6%8F%E5%B3%B6%E7%9C%8C%E9%A0%88%E8%B3%80%E5%B7%9D%E5%B8%82%E5%8C%97%E5%B1%B1%E5%AF%BA%E7%94%BA318&hl=ja&z=16&output=embed"></iframe>
+    </div>
+    <p class="maplinks anime ani_fade d2">
+      <a href="https://www.google.com/maps/search/?api=1&query=%E7%A6%8F%E5%B3%B6%E7%9C%8C%E9%A0%88%E8%B3%80%E5%B7%9D%E5%B8%82%E5%8C%97%E5%B1%B1%E5%AF%BA%E7%94%BA318" target="_blank" rel="noopener">Googleマップで開く</a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=%E7%A6%8F%E5%B3%B6%E7%9C%8C%E9%A0%88%E8%B3%80%E5%B7%9D%E5%B8%82%E5%8C%97%E5%B1%B1%E5%AF%BA%E7%94%BA318" target="_blank" rel="noopener">ここへの経路を調べる</a>
+      <span class="todo">Googleビジネスプロフィールのリンク 要確認</span>
+    </p>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap ft-inner">
+    <div class="f-brand">
+      <div class="ftlogo"><img id="logoFt" alt="Pazoo CAR SHOP" hidden><b id="logoFtTxt">Pazoo</b><span class="brandtxt"><small>CAR SHOP</small>Pazoo</span></div>
+      <p class="f-tagline">四駆と旧車が好きでやっている店です。買ったあとの車検・整備・板金塗装、保険まで、ぜんぶ同じ店で引き受けます。</p>
+    </div>
+
+    <nav class="f-nav" aria-label="フッターメニュー">
+      <p class="f-label">Menu</p>
+      <a href="#stock">いまある車</a>
+      <a href="#service">サービス</a>
+      <a href="#insurance">事故にあわれたら</a>
+      <a href="#voice">お客様の声</a>
+      <a href="#faq">よくあるご質問</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="#insta">Instagram</a>
+      <a href="companyoutline.html">会社概要</a>
+    </nav>
+
+    <nav class="f-nav" aria-label="取り扱いメニュー">
+      <p class="f-label">Service</p>
+      <a href="order.html">中古車販売</a>
+      <a href="order.html">買取・下取り</a>
+      <a href="order.html">注文販売（お探しします）</a>
+      <a href="maintenance.html">車検・整備</a>
+      <a href="repair-paint.html">板金・塗装</a>
+      <a href="coating.html">コーティング</a>
+      <a href="order-insurance.html">自動車保険</a>
+    </nav>
+
+    <div class="f-info">
+      <p class="f-label">Shop</p>
+      <p class="f-address">
+        株式会社FIFTY&#39;S<br>
+        〒962-0061 福島県須賀川市北山寺町318<br>
+        国道4号沿い・須賀川インターから5分<br>
+        <a href="tel:0248762077">0248-76-2077</a>（FAX 0248-94-5080）<br>
+        10:00〜19:00／火曜定休<br>
+        東北運輸局長 認証工場 4-7761
+      </p>
+      <p class="f-sns">
+        <a href="https://www.instagram.com/carshoppazoo" target="_blank" rel="noopener">Instagram</a>
+        <a href="#">LINE <span class="todo">URL 要確認</span></a>
+      </p>
+    </div>
+  </div>
+
+  <div class="wrap ft-bottom">
+    <span>&copy; Pazoo CAR SHOP／株式会社FIFTY&#39;S</span>
+    <a href="privacy.html">プライバシーポリシー</a>
+  </div>
 </footer>
-<a id="return_top" href="#" aria-label="ページ上部へ戻る">↑</a>
-<script src="assets/js/site.js"></script>
+
+<!-- 電話とLINEはいつでも押せるように（社長 2026-09-05「お問い合わせ電話番号とLINEお問い合わせボタンは常に表示」）。
+     PCはヘッダーが画面に貼りついたままなので、狭い画面だけ下に固定バーを出す。 -->
+<div class="fixbar">
+  <a class="fx-tel" href="tel:0248762077"><small>お電話</small>0248-76-2077</a>
+  <a class="fx-line" href="#">LINEで相談</a>
+</div>
+
+
+<script src="assets/js/pazoo-2609.js" defer></script>
 </body>
 </html>
