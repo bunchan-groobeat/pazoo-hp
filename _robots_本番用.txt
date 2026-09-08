@@ -1,0 +1,29 @@
+# CarShop Pazoo 本番用 robots.txt — 2026-09-09 太郎
+# ★このファイルは「入れ替え公開の当日」に置くもの。確認用サーバーには置かない。
+# 方針: 検索エンジンとAI検索の両方に、全ページを読ませる。
+
+User-agent: *
+Allow: /
+
+# --- AI検索に載るための明示許可（LLMO/AIO）---
+# ★2026-09-09 時点で、この6つを止めていると ChatGPT・Claude・Perplexity の
+#   回答内に店名が出にくくなる。逆に許可＝学習にも使われうる（社長判断で外せる）。
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://pazoo.co.jp/sitemap.xml
