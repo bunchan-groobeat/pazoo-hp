@@ -134,7 +134,7 @@
 
   /* 在庫（2026-09-02 グーネット掲載の実在庫6台） */
   var STOCK = {
-    updated: "2026.09.04",
+    updated: "2026.09.09",
     cars: [
       {name:"スズキ ジムニー ランドベンチャー", year:1997, km:20.3, price:75, shaken:"車検なし", badge:"Jimny", repair:"修復歴あり",
        photo:"https://picture1.goo-net.com/7000902905/30240807/J/70009029053024080700100.jpg",
@@ -142,15 +142,9 @@
       {name:"スズキ ジムニー XL", year:1997, km:14.6, price:103, shaken:"車検2026年12月まで", badge:"Jimny", repair:null,
        photo:"https://picture1.goo-net.com/7000902905/30260716/J/70009029053026071600100.jpg",
        url:"https://www.goo-net.com/usedcar/spread/goo/11/700090290530260716001.html"},
-      {name:"スズキ ジムニー XC", year:2024, km:1.1, price:null, shaken:"車検2027年9月まで", badge:"Jimny", repair:null,
-       photo:"https://picture1.goo-net.com/7000902905/30260727/J/70009029053026072700100.jpg",
-       url:"https://www.goo-net.com/usedcar/spread/goo/11/700090290530260727001.html"},
       {name:"ジープ・グランドワゴニア", year:1990, km:null, price:407.5, shaken:"車検なし", badge:"Classic", repair:null,
        photo:"https://picture1.goo-net.com/7000902905/30260420/J/70009029053026042000100.jpg",
        url:"https://www.goo-net.com/usedcar/spread/goo/11/700090290530260420001.html"},
-      {name:"スズキ スペーシア ハイブリッドX", year:2020, km:9.7, price:75, shaken:"車検2027年1月まで", badge:null, repair:null,
-       photo:"https://picture1.goo-net.com/7000902905/30260703/J/70009029053026070300100.jpg",
-       url:"https://www.goo-net.com/usedcar/spread/goo/11/700090290530260703001.html"},
       {name:"スズキ キャリイトラック", year:2015, km:2.2, price:77, shaken:"車検2028年6月まで", badge:null, repair:null,
        photo:"https://picture1.goo-net.com/7000902905/30260518/J/70009029053026051800100.jpg",
        url:"https://www.goo-net.com/usedcar/spread/goo/11/700090290530260518001.html"}

@@ -41,6 +41,23 @@ const out = body.replace(/src="(assets\/[^"]+)"/g, (m, rel) => {
 // 外部JSの読み込みは消す（下でインラインにする）
 .replace(/\s*<script src="assets\/js\/[^"]*"[^>]*><\/script>/g, '');
 
+// 在庫の写真はグーネット（picture1.goo-net.com）から読む作り。
+// Artifactのビューアは自分のファイル以外の画像を遮断する（CSP）ので、1枚版では取ってきて埋め込む。
+// ★本番サイト側はグーネットのURLのまま（在庫が入れ替わっても自動で追従するため）。
+const remote = [...js.matchAll(/photo:"(https:\/\/[^"]+)"/g)].map(m => m[1]);
+let fetched = 0;
+for (const url of [...new Set(remote)]) {
+  try {
+    const r = await fetch(url);
+    if (!r.ok) { console.warn(`  写真が取れない(${r.status}): ${url}`); continue; }
+    const buf = Buffer.from(await r.arrayBuffer());
+    const mime = r.headers.get('content-type') || 'image/jpeg';
+    js = js.split(`"${url}"`).join(`"data:${mime};base64,${buf.toString('base64')}"`);
+    fetched++;
+  } catch (e) { console.warn(`  写真が取れない: ${url} (${e.message})`); }
+}
+console.log(`  在庫写真 ${fetched}/${new Set(remote).size} 枚を埋め込み`);
+
 // Artifactのビューアは他サイトのiframeを遮断する（CSP）。1枚版では地図をリンクに置き換える。
 // ★本番サイト側の地図はそのまま。差し替えるのは確認用の1枚版だけ。
 const MAPQ = '福島県須賀川市北山寺町318';

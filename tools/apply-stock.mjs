@@ -1,6 +1,8 @@
-/* Pazoo：goo-stock.mjs が取ってきた実在庫を demo/pazoo.html の STOCK に反映する。
+/* Pazoo：goo-stock.mjs が取ってきた実在庫を assets/js/pazoo-2609.js の STOCK に反映する。
+   ★2026-09-09 向き先を変更＝それまで demo/pazoo.html（デザイン案）に書いていた。
+     9月デザインを本番9ページへ実装したので、配信されるのは assets/js/pazoo-2609.js。
    使い方： node C:/HQ/projects/pazoo-hp/tools/apply-stock.mjs         （下書きを表示するだけ）
-            node C:/HQ/projects/pazoo-hp/tools/apply-stock.mjs --write （実際に書き込む／.bak を残す）
+            node C:/HQ/projects/pazoo-hp/tools/apply-stock.mjs --write （実際に書き込む）
 
    ★車名は上書きしない。グーネットの見出しは「ジムニー ＸＬ ４ＷＤ リフトアップ マッドタイヤ 前後社外バンパー…」と
      装備まで入った長文で、カードに載せると崩れるため。名前とバッジは pazoo.html 側の手書きを正とし、
@@ -9,7 +11,9 @@
 
 import fs from "node:fs";
 
-const HTML = "C:/HQ/projects/pazoo-hp/demo/pazoo.html";
+const HTML = "C:/HQ/projects/pazoo-hp/assets/js/pazoo-2609.js";
+/* 控えは配信フォルダの外（data/_bak/）に置く。公開対象に .bak を残すと検品で🔴になるため */
+const BAKDIR = "C:/HQ/projects/pazoo-hp/data/_bak";
 const JSONP = "C:/HQ/projects/pazoo-hp/data/stock_latest.json";
 const WRITE = process.argv.includes("--write");
 
@@ -98,7 +102,10 @@ if (!WRITE) {
   process.exit(0);
 }
 
-fs.writeFileSync(HTML + ".bak", html, "utf8");
+fs.mkdirSync(BAKDIR, { recursive: true });
+const bak = `${BAKDIR}/pazoo-2609.js.${updated.replace(/\./g, "")}-${Date.now()}`;
+fs.writeFileSync(bak, html, "utf8");
 html = html.slice(0, s0) + rebuilt + html.slice(e0 + 5);
 fs.writeFileSync(HTML, html, "utf8");
-console.log(`\n書き込んだ: ${HTML}（元は ${HTML}.bak）`);
+console.log(`
+書き込んだ: ${HTML}（控え: ${bak}）`);
