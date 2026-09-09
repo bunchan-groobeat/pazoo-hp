@@ -19,7 +19,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ja);font-s
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
-section{padding:96px 0}
+section{padding:96px 0;overflow-x:clip}
 @media(max-width:720px){section{padding:60px 0}.wrap{padding:0 20px}}
 
 /* ── 英字の大見出しで骨格を作り、和文は小さく添える ── */
@@ -237,6 +237,9 @@ section .h2::before{
   content:"";position:absolute;z-index:-1;
   top:-.10em;height:1.18em;                       /* 英字1行のぶんだけ。和文の添え字にはかからない */
   left:50%;width:100vw;margin-left:-50vw;         /* wrap の外へ出して画面の端から端まで */
+  /* ★100vw は縦スクロールバーの幅も含むため、そのままだと全セクションが8px右へ溢れて
+     ページに横スクロールが出る（2026-09-09 実測 1913 vs 1905）。section 側で clip する。
+     hidden ではなく clip＝スクロール枠を作らないので sticky ヘッダーが死なない。 */
   background:var(--wine);
   transform:scaleX(0);transform-origin:left center;
   transition:transform 2.2s cubic-bezier(.66,.45,.14,.79) .3s}
@@ -283,14 +286,25 @@ section:not(.dark) .h2 .ja{color:rgba(255,255,255,.88)}/* ワインの帯の中�
 }
 
 /* 口コミのカード。同じ大きさで並べず、1件目だけ横いっぱいの大判にする */
-.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.vcard{position:relative;background:var(--paper);border:1px solid var(--line-soft);padding:30px 26px 22px;
+/* 横に流すレール（社長 2026-09-09「Gooの評価内容は横スクロールにして自動で流して」）。
+   同じ並びが2組入っていて、1組ぶん進んだら位置を戻す＝継ぎ目が見えない。
+   指で送れるように overflow-x:auto のまま、送りは JS が位置を進める。 */
+.voices{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;
+  padding:4px 2px 10px;
+  /* ★html に scroll-behavior:smooth が掛かっている。そのままだと毎フレームの位置指定が
+     「滑らかに移動」扱いになって自動送りが破綻するので、ここだけ切る（2026-09-09） */
+  scroll-behavior:auto}
+.voices::-webkit-scrollbar{display:none}
+.voices:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
+.vtrack{display:flex;gap:20px;width:max-content;align-items:stretch}
+.vcard{position:relative;flex:0 0 316px;width:316px;background:var(--paper);border:1px solid var(--line-soft);padding:28px 24px 20px;
   display:flex;flex-direction:column;gap:16px}
-.vcard.feat{grid-column:1/-1;padding:36px 34px 26px;border-color:var(--line)}
+/* 横レールでは大小を付けない（流れる帯でガタつくため）。grid時代の指定を打ち消す */
+.vcard.feat{grid-column:auto;flex:0 0 316px;width:316px;padding:28px 24px 20px;border-color:var(--line)}
 .qmark{width:34px;height:34px;fill:var(--wine);opacity:.18;flex:none}
-.vcard.feat .qmark{width:46px;height:46px;opacity:.22}
+.vcard.feat .qmark{width:34px;height:34px;opacity:.18}
 .vtext{margin:0;font-size:16px;line-height:1.95;color:var(--ink)}
-.vcard.feat .vtext{font-size:21px;line-height:1.9;max-width:44ch}
+.vcard.feat .vtext{font-size:16px;line-height:1.95;max-width:none}
 .vmeta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:auto;padding-top:16px;border-top:1px solid var(--line-soft)}
 .avatar{width:38px;height:38px;border-radius:50%;background:var(--wine);color:#fff;flex:none;
   display:grid;place-items:center;font-weight:700;font-size:15px}
@@ -300,7 +314,7 @@ section:not(.dark) .h2 .ja{color:rgba(255,255,255,.88)}/* ワインの帯の中�
 .vcar .ic{width:15px;height:15px;fill:var(--ink-sub);flex:none}
 .vstars{display:inline-flex;gap:2px;font-size:15px;margin-left:auto}
 .vmeta time{font-size:11.5px;color:var(--ink-sub);letter-spacing:.06em;flex-basis:100%;text-align:right}
-@media(max-width:900px){.voices{grid-template-columns:1fr}.vcard.feat .vtext{font-size:18px}}
+@media(max-width:900px){.vcard,.vcard.feat,.vcard.wide{flex:0 0 268px;width:268px;padding:24px 20px 18px}}
 
 /* ── 声 ── */
 /* 声は本文より大きく、左を18%空けて置く（全部が同じ左端に揃わないようにする＝崩し③） */
@@ -645,7 +659,7 @@ details p{margin:12px 0 0 33px;font-size:14.5px;color:var(--ink-sub)}
 }
 
 /* 口コミを全10件に増やしたので、3列が単調にならないよう2件ごとに幅を変える（2026-09-09） */
-.vcard.wide{grid-column:span 2}
+.vcard.wide{grid-column:auto;flex:0 0 316px;width:316px}
 @media(max-width:900px){.vcard.wide{grid-column:auto}}
 
 /* 代表の写真＋ひとこと（2026-09-09 社長から支給・Photoshopの被写体選択で背景を抜いた）
@@ -671,8 +685,21 @@ details p{margin:12px 0 0 33px;font-size:14.5px;color:var(--ink-sub)}
 .owner-row .owner cite{display:block;font-style:normal;font-weight:700;font-size:15px;letter-spacing:.06em}
 .owner-row .owner cite span{display:block;font-weight:400;font-size:12px;letter-spacing:.14em;
   color:var(--ink-sub);margin-top:3px}
-@media (max-width:820px){
-  .owner-photo{max-width:210px}
+/* スマホは写真の横にひとことを置く（社長 2026-09-09「スマホは写真の横にメッセージにして」）。
+   ★PCは縦（写真の下に引用）＝左カラムが440pxしかなく、横に並べると1行10文字まで潰れるため。
+   ★スマホも2列グリッドだと1行12文字で読めなかった（390pxで実測）。
+     回り込みにして、文字が写真の横から始まり下へ抜ける形にした。 */
+@media (max-width:900px){
+  .owner-row{display:block;margin-top:34px}
+  .owner-photo{float:left;width:118px;max-width:none;margin:4px 16px 8px 0;padding-top:14px}
+  .owner-photo::before{top:14px}
+  .owner-row .owner{padding:0;border-left:0;max-width:none}
+  .owner-row .owner p{font-size:14.5px;line-height:1.95;margin-bottom:12px}
+  .owner-row .owner cite{clear:both;padding-top:10px;border-top:1px solid var(--line-soft);font-size:14px}
+}
+@media (max-width:360px){
+  .owner-photo{width:100px;margin-right:13px}
+  .owner-row .owner p{font-size:14px}
 }
 
 /* 会社概要の代表写真（2026-09-09）。トップと同じ面に立たせる（社長「背景か何か入れないと違和感」） */

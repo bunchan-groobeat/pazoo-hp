@@ -27,22 +27,29 @@ function stars(score) {
 }
 const esc = t => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-// 1件目（いちばん新しいもの）を大きく出す。残りは同じ大きさで並べない＝2件ごとに幅を変える
-const cards = d.reviews.map((r, i) => {
-  const cls = i === 0 ? 'vcard feat' : (i % 3 === 0 ? 'vcard wide' : 'vcard');
-  return `      <article class="${cls}">
-        <svg class="qmark" aria-hidden="true"><use href="#i-quote"/></svg>
-        <p class="vtext">${esc(r.text)}</p>
-        <div class="vmeta">
-          <span class="avatar" aria-hidden="true">${esc(r.who.slice(0, 1))}</span>
-          <span class="vwho"><b>${esc(r.who)}さん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>${esc(splitCar(r.car))}</span></span>
-          <span class="vstars" aria-label="評価${r.score}">${stars(r.score)}</span>
-          <time>${ym(r.date)}</time>
-        </div>
-      </article>`;
-}).join('\n');
+// 横に流すレール（社長 2026-09-09「Gooの評価内容は横スクロールにして自動で流して」）。
+// ★継ぎ目を消すため同じ並びを2組つくる。2組目は読み上げが二重にならないよう aria-hidden。
+//   全件が2周に含まれるので、カードの大小は付けない（流れる帯では大小がガタつくため）。
+const card = (r) => `        <article class="vcard">
+          <svg class="qmark" aria-hidden="true"><use href="#i-quote"/></svg>
+          <p class="vtext">${esc(r.text)}</p>
+          <div class="vmeta">
+            <span class="avatar" aria-hidden="true">${esc(r.who.slice(0, 1))}</span>
+            <span class="vwho"><b>${esc(r.who)}さん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>${esc(splitCar(r.car))}</span></span>
+            <span class="vstars" aria-label="評価${r.score}">${stars(r.score)}</span>
+            <time>${ym(r.date)}</time>
+          </div>
+        </article>`;
 
-const voices = `<div class="voices anime ani_slideup d1">\n${cards}\n    </div>`;
+const set1 = d.reviews.map(card).join('\n');
+const set2 = d.reviews.map(card).join('\n').replace(/<article class="vcard">/g, '<article class="vcard" aria-hidden="true">');
+
+const voices = `<div class="voices anime ani_slideup d1" id="voices" tabindex="0" aria-label="お客様の声（横にスクロールします）">
+      <div class="vtrack" id="vtrack">
+${set1}
+${set2}
+      </div>
+    </div>`;
 const note = `    <p class="note anime ani_fade d2">${d.checkedAt.slice(0, 10)} 時点でグーネットに${d.count}件。原文のまま全件を載せています。<a href="${d.source}" target="_blank" rel="noopener">グーネットの口コミページ</a>で最新をご覧いただけます。</p>`;
 
 const f = ROOT + 'index.html';

@@ -213,3 +213,68 @@
     }
   }
 })();
+
+/* ── お客様の声を横に自動で流す（社長 2026-09-09「Gooの評価内容は横スクロールにして自動で流して」）
+   ・同じ並びが2組入っているので、1組ぶん進んだら位置を戻す＝継ぎ目が見えない
+   ・指で送れるように scrollLeft を進める方式にした（CSSアニメだと触っても掴めない）
+   ・触っている間と、マウスを乗せている間、キーボードで中に入った間は止める
+   ・「動きを減らす」設定の方には最初から流さない
+   ★2026-09-09 の罠＝`rail.scrollLeft += 0.42` は動かない。読み出しが整数に丸まるため、
+     小数を足しても毎回捨てられる（600回まわして位置0を実測）。位置は自分で小数のまま持つ。 */
+(function(){
+  var rail = document.getElementById('voices');
+  var track = document.getElementById('vtrack');
+  if (!rail || !track) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var SPEED = 0.45;          /* 1フレームあたりの進み（px）＝1秒で約27px */
+  var IDLE  = 2200;          /* 触ったあと、これだけ経ったら再開する（ミリ秒） */
+  var hold = false, resumeAt = 0, raf = null;
+  var pos = 0;               /* ★小数のまま持つ位置。scrollLeft には毎回これを入れる */
+  var selfScroll = false;    /* 自分で動かした scroll か、人が動かした scroll かの区別 */
+
+  function half(){ return track.scrollWidth / 2; }   /* 1組ぶんの幅 */
+
+  function step(){
+    raf = requestAnimationFrame(step);
+    if (hold || Date.now() < resumeAt) return;
+    var h = half();
+    if (!h) return;
+    pos += SPEED;
+    if (pos >= h) pos -= h;
+    selfScroll = true;
+    rail.scrollLeft = pos;
+  }
+
+  function pause(){ hold = true; }
+  function release(){ hold = false; resumeAt = Date.now() + IDLE; }
+
+  rail.addEventListener('mouseenter', pause);
+  rail.addEventListener('mouseleave', release);
+  rail.addEventListener('focusin', pause);
+  rail.addEventListener('focusout', release);
+  rail.addEventListener('pointerdown', pause);
+  window.addEventListener('pointerup', release);
+  rail.addEventListener('touchstart', pause, { passive: true });
+  rail.addEventListener('touchend', release, { passive: true });
+
+  /* 人が指やホイールで動かしたら、その位置から続ける。
+     先頭を突き抜けたら1組ぶん先へ回して、左端で止まらないようにする。 */
+  rail.addEventListener('scroll', function(){
+    if (selfScroll) { selfScroll = false; return; }
+    var h = half();
+    if (h && rail.scrollLeft <= 0) { rail.scrollLeft = h; }
+    pos = rail.scrollLeft;
+  }, { passive: true });
+
+  /* 画面に入っている間だけ動かす（見えていないところで回し続けない） */
+  function start(){ if (!raf) raf = requestAnimationFrame(step); }
+  function stop(){ if (raf) { cancelAnimationFrame(raf); raf = null; } }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function(es){
+      es.forEach(function(e){ e.isIntersecting ? start() : stop(); });
+    }, { rootMargin: '120px' }).observe(rail);
+  } else {
+    start();
+  }
+})();
