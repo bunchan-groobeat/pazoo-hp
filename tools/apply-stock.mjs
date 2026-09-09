@@ -16,6 +16,8 @@ const HTML = "C:/HQ/projects/pazoo-hp/assets/js/pazoo-2609.js";
 const BAKDIR = "C:/HQ/projects/pazoo-hp/data/_bak";
 const JSONP = "C:/HQ/projects/pazoo-hp/data/stock_latest.json";
 const WRITE = process.argv.includes("--write");
+/* --notify＝夜間用。本番へは書かず、要るときだけ社長のLINEに1行足す（2026-09-09 社長決定「2」） */
+const NOTIFY = process.argv.includes("--notify");
 
 const idOf = (url) => (String(url).match(/(\d{21})\.html/) || [])[1] || null;
 const jstNow = () => new Date(Date.now() + 9 * 3600 * 1000);
@@ -96,6 +98,42 @@ if (news.length) {
 }
 if (gone.length) console.log(`✅ 消えた車を ${gone.length}台ぶん外した（売れた可能性）`);
 if (!news.length && !gone.length) console.log("台数の増減なし（数値と日付だけ合わせた）");
+
+/* ── --notify：夜間に確認だけして、要るときだけ社長のLINEに1行足す（2026-09-09 社長決定「2」）
+   自動で本番へ書かないのは、新しく入った車が仮名（【要確認】）のまま客に見えるのを避けるため。
+   足すのは次の3つのどれかに当たった日だけ。何も無い日は黙っている。
+     ① 新しく入った車がある＝名前を人が決める必要がある
+     ② 台数が減った＝売れた分をサイトから外す必要がある
+     ③ サイトの在庫表示が「あと少しで止まる」＝48時間の安全弁が近い（これがいちばん怖い） */
+if (NOTIFY) {
+  const LINEOUT = "C:/HQ/projects/pazoo-hp/data/stock_line.txt";
+  const VALVE_H = 48;   // assets/js/pazoo-2609.js の安全弁と同じ値
+  const WARN_H = 30;    // これを超えたら知らせる（翌晩まで待つと間に合わないため）
+
+  const cur = (html.match(/updated:\s*"([\d.]+)"/) || [])[1] || null;
+  const curTs = cur ? Date.parse(cur.replace(/\./g, "/")) : NaN;
+  const ageH = isNaN(curTs) ? null : (Date.now() - curTs) / 3600000;
+
+  const why = [];
+  if (news.length) why.push(`新規${news.length}台は仮名`);
+  if (gone.length) why.push(`売れた${gone.length}台が残ったまま`);
+  if (ageH !== null && ageH > WARN_H) {
+    const left = Math.round(VALVE_H - ageH);
+    why.push(left > 0 ? `あと約${left}時間で在庫表示が止まる` : `在庫表示は既に止まっている`);
+  }
+
+  let line = "";
+  if (why.length) {
+    line = `■ Pazoo在庫 反映待ち ${stock.cars.length}台（${why.join("／")}）→ apply-stock.mjs --write`;
+    let prev = "";
+    try { prev = fs.readFileSync(LINEOUT, "utf8").trim(); } catch { prev = ""; }
+    fs.writeFileSync(LINEOUT, prev ? prev + "\n" + line : line, "utf8");   // goo-stock の1行は消さずに足す
+  }
+  console.log(line ? `[LINE用] ${line}` : "[LINE用] 知らせることなし（反映も安全弁も余裕あり）");
+  console.log(`  サイト側の更新日=${cur ?? "不明"}${ageH === null ? "" : `（${ageH.toFixed(1)}時間前）`}`);
+  if (news.length) news.forEach((c) => console.log(`  仮名で入る予定: ${tempName(c.name)}【要確認】 ${c.url}`));
+  process.exit(0);
+}
 
 if (!WRITE) {
   console.log("\n--- 下書き（--write を付けると書き込む） ---\n" + rebuilt);
