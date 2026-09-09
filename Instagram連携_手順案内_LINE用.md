@@ -7,7 +7,7 @@
 
 | | |
 |---|---|
-| 待ち箇所 | `demo/pazoo.html` の **`var BEHOLD_FEED_ID = '';`** ★ここに20文字くらいのIDを入れるだけ |
+| 待ち箇所 | **`assets/js/pazoo-2609.js` の `var BEHOLD_FEED_ID = '';`**（★2026-09-09 変更。それまで `demo/pazoo.html` を指していた） ★ここに20文字くらいのIDを入れるだけ |
 | 取得先 | `https://feeds.behold.so/<Feed ID>` |
 | 表示枠 | `#insta` セクション（お問い合わせと会社概要の間）。正方形8枚・PCは4列／スマホは2列 |
 | 未設定のとき | 「Instagram連携 未設定」の板が出る（**空欄のまま公開しても崩れない**） |
@@ -61,7 +61,7 @@ IDをいただければ、こちらで入れて反映します。
 
 ## IDが届いたあと、うちがやること
 
-1. `demo/pazoo.html` の `var BEHOLD_FEED_ID = '';` にIDを入れる
+1. `assets/js/pazoo-2609.js` の `var BEHOLD_FEED_ID = '';` にIDを入れる
 2. `node demo/tools/build_pazoo.js` → Artifact更新（**確認用では並ばない**ので、本番で確認する）
 3. 本番（エックスサーバー）へ上げて、実機で8枚並ぶことを確認
 4. 「Instagram連携 未設定」の板が消えていることを確認
