@@ -590,7 +590,7 @@ details p{margin:12px 0 0 33px;font-size:14.5px;color:var(--ink-sub)}
    出典＝Pexels（商用利用可・クレジット表記不要）。実際の施工写真が届いたら差し替える。
    ★他社の仕事を自社の実績に見せないため、必ず「イメージ写真」と明示する。 */
 .figimg{margin:0 0 12px}
-.figimg img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.figimg img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
 .figimg figcaption{margin-top:7px;font-size:12px;letter-spacing:.06em;color:var(--ink-sub);text-align:right}
 .ph-s{min-height:0;padding:12px 16px;font-size:12px;margin:0}
 
