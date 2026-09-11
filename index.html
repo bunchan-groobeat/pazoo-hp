@@ -14,7 +14,7 @@
 <!-- ▼ SEO強化(head内追加のみ・既存の見た目/機能に不触) 2026-07-30 ルイージ追加 ─ 水野谷方式の横展開 =========
      ★NAP要社長確認（確認取れ次第この注記を外す。Pazooは2026-07-30時点で社長未確認）:
        - telephone/address … 現行サイト(会社概要)表記を正として実装
-       - openingHours … 「10:00-19:00 / 火曜定休」→ 火曜以外を営業日と解釈
+       - openingHours … 「10:00-18:30 / 火曜定休」→ 火曜以外を営業日と解釈
        - geo座標 … 現行サイトの地図埋め込みに由来(実位置と誤差の可能性)
      ★NAP変更時は index.html と companyoutline.html の両方のJSON-LDを必ず更新すること(不一致は逆効果)。 -->
 <link rel="canonical" href="https://bunchan-groobeat.github.io/pazoo-hp/">
@@ -32,6 +32,7 @@
 {
   "@context": "https://schema.org",
   "@type": ["AutoRepair", "AutoDealer"],
+  "foundingDate": "2006",
   "@id": "https://bunchan-groobeat.github.io/pazoo-hp/#business",
   "name": "CarShop Pazoo",
   "legalName": "株式会社FIFTY'S",
@@ -50,13 +51,13 @@
     "streetAddress": "北山寺町318"
   },
   "geo": { "@type": "GeoCoordinates", "latitude": 37.305145, "longitude": 140.366726 },
-  "hasMap": "https://maps.google.com/?q=37.305145,140.366726",
+  "hasMap": "https://www.google.com/maps?cid=9501020526359880822",
   "areaServed": { "@type": "AdministrativeArea", "name": "福島県須賀川市およびその周辺" },
   "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
     "opens": "10:00",
-    "closes": "19:00"
+    "closes": "18:30"
   }],
   "sameAs": [
     "https://www.instagram.com/carshoppazoo/",
@@ -108,7 +109,7 @@
       "name": "ローンは使えますか",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "ご利用いただけます。お支払い回数のご相談も承ります。アプラス・イオン・オリコ・ジャックス・セディナのオートローンをお取り扱いしています（50音順）。"
+        "text": "ご利用いただけます。お支払い回数のご相談も承ります。オリエントコーポレーション（オリコ）・オリコプロダクトファイナンス・ジャックスのオートローンをお取り扱いしています（50音順）。"
       }
     },
     {
@@ -116,7 +117,7 @@
       "name": "代車は借りられますか",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "ご用意しています。台数に限りがありますので、お早めにご相談ください。"
+        "text": "ご用意しています。台数に限りがありますので、ご予約ください。"
       }
     },
     {
@@ -172,8 +173,8 @@
       <a href="companyoutline.html">Company</a>
     </nav>
     <div class="cta">
-      <a class="line" href="#">LINEで相談</a>
-      <a class="tel" href="tel:0248762077">0248-76-2077<small>10:00-19:00／火曜定休</small></a>
+      <a class="line" href="https://lin.ee/tHzevLr" target="_blank" rel="noopener">LINEで相談</a>
+      <a class="tel" href="tel:0248762077">0248-76-2077<small>10:00-18:30／火曜定休</small></a>
       <button type="button" class="menu" id="menuBtn" aria-controls="drawer" aria-expanded="false" aria-label="メニューを開く"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -188,7 +189,7 @@
   <a href="#contact">Contact<small>お問い合わせ</small></a>
   <a href="#insta">Instagram<small>@carshoppazoo</small></a>
   <a href="#company">Company<small>会社概要</small></a>
-  <div class="drawer-cta"><a class="line" href="#">LINEで相談</a><a class="tel" href="tel:0248762077">0248-76-2077</a></div>
+  <div class="drawer-cta"><a class="line" href="https://lin.ee/tHzevLr" target="_blank" rel="noopener">LINEで相談</a><a class="tel" href="tel:0248762077">0248-76-2077</a></div>
 </nav>
 
 <div class="hero">
@@ -277,14 +278,14 @@
       <div class="cell">
         <p class="no">02 — Purchase</p>
         <h3>買取します</h3>
-        <p>日本自動車査定協会（JAAA）の査定士が在籍しています。その場で状態を確認してお見積りします。買い替えなら次の一台と合わせてご相談ください。<span class="todo">出張査定・必要書類 要確認</span></p>
+        <p>日本自動車査定協会（JAAA）の査定士が在籍しています。その場で状態を確認してお見積りします。買い替えなら次の一台と合わせてご相談ください。出張査定もできます。写真だけのご相談でも構いません。<span class="todo">必要書類 要確認</span></p>
               <p class="more"><a href="order.html">注文販売・買取のページへ</a></p>
       </div>
     </div>
     <ol class="ledger anime ani_slideup d2">
       <li><span class="no">03</span><div><h3>車検・整備<small>Inspection / Maintenance</small></h3><p>買っていただいた車も、他店で買った車も。認証工場で車検と点検をします。</p><p class="fact">東北運輸局長 認証工場 第4-7761号</p><p class="more"><a href="maintenance.html">車検・整備のページへ</a></p></div></li>
       <li class="wide"><span class="no">04</span><div><h3>板金・塗装<small>Body &amp; Paint</small></h3><p>小さなキズ1か所から。保険を使って直すか、使わずに直すか。見積りを2通り出して、安く済むほうをお勧めします。</p><p class="more"><a href="repair-paint.html">板金・塗装のページへ</a></p></div><p class="fact">保険を使うと翌年から3等級ダウン。<br>修理代と保険料の差額まで、一緒に計算します。</p></li>
-      <li><span class="no">05</span><div><h3>コーティング<small>Coating</small></h3><p>洗車が楽になります。<span class="todo">ブランド・料金 要確認</span></p><p class="more"><a href="coating.html">コーティングのページへ</a></p></div></li>
+      <li><span class="no">05</span><div><h3>コーティング<small>Coating</small></h3><p>ガラス系のコーティングです。洗車が楽になります。<span class="todo">料金の目安 要確認</span></p><p class="more"><a href="coating.html">コーティングのページへ</a></p></div></li>
       <li class="wide"><span class="no">06</span><div><h3>自動車保険<small>Insurance</small></h3><p>保険の窓口も当店です。事故のあとに、保険会社と修理工場へ別々に電話しなくて済みます。</p><p class="more"><a href="order-insurance.html">マイカーローン・保険のページへ</a></p></div><p class="fact">取扱保険会社 三井住友海上<br>他社の保険でも修理はお受けします。</p></li>
     </ol>
   </div>
@@ -544,8 +545,8 @@
     <details open class="anime ani_fade d1"><summary>ジムニーは在庫がありますか</summary><p>常に何台か置いています。年式もグレードもいろいろですので、お使いになる場面をお聞かせいただければ、合う一台をご提案します。いま無ければお探しします。</p></details>
     <details class="anime ani_fade d2"><summary>在庫にない車も探してもらえますか</summary><p>お探しします。車種・年式・色・ご予算を伺い、全国のオークションとネットワークから探します。見つかり次第ご連絡します。</p></details>
     <details class="anime ani_fade d3"><summary>今の車を下取りに出せますか</summary><p>できます。JAAAの査定士が在籍していますので、その場で状態を確認してお見積りします。</p></details>
-    <details class="anime ani_fade d3"><summary>ローンは使えますか</summary><p>ご利用いただけます。お支払い回数のご相談も承ります。アプラス・イオン・オリコ・ジャックス・セディナのオートローンをお取り扱いしています（50音順）。</p></details>
-    <details class="anime ani_fade d3"><summary>代車は借りられますか</summary><p>ご用意しています。台数に限りがありますので、お早めにご相談ください。<span class="todo">無料か 要確認</span></p></details>
+    <details class="anime ani_fade d3"><summary>ローンは使えますか</summary><p>ご利用いただけます。お支払い回数のご相談も承ります。オリエントコーポレーション（オリコ）・オリコプロダクトファイナンス・ジャックスのオートローンをお取り扱いしています（50音順）。</p></details>
+    <details class="anime ani_fade d3"><summary>代車は借りられますか</summary><p>ご用意しています。台数に限りがありますので、ご予約ください。</p></details>
     <details class="anime ani_fade d3"><summary>保険を使うと、等級はどうなりますか</summary><p>車両保険を使って修理すると、翌年から3等級下がるのが一般的です。修理代と保険料の増額を比べて、使わないほうが安く済む場合もあります。どちらが得か、当店で一緒に計算できます。</p></details>
     <details class="anime ani_fade d3"><summary>他店で買った車、他社の保険でも修理できますか</summary><p>できます。どちらでお車を買われたか、どの保険会社かは問いません。</p></details>
     <details class="anime ani_fade d3"><summary>事故のあと、まず何をすればいいですか</summary><p>安全を確保して警察へご連絡ください。そのあとで当店にお電話いただければ、保険の手続きから修理まで順番にご案内します。</p></details>
@@ -556,17 +557,17 @@
   <div class="wrap">
     <p class="eyebrow anime ani_fade">Get In Touch</p>
     <h2 class="h2 anime"><span class="ani_txt w1"><span>Contact</span></span><span class="ja ani_fade d2">お問い合わせ</span></h2>
-    <p class="lead anime ani_slideup d1">「この車、まだありますか？」の一言で大丈夫です。下取りの相場でも、車検の時期の相談でも構いません。電話は10時から19時まで、火曜だけ休みです。</p>
+    <p class="lead anime ani_slideup d1">「この車、まだありますか？」の一言で大丈夫です。下取りの相場でも、車検の時期の相談でも構いません。電話は10時から18時半まで、火曜だけ休みです。</p>
     <div class="ct anime ani_slideup d1">
-      <a href="#">
+      <a href="https://lin.ee/tHzevLr" target="_blank" rel="noopener">
         <span class="k">Line</span>
         <span class="v line-v">LINEで相談</span>
-        <span class="s">友だち追加して、そのままチャットで。お車の写真を送っていただくだけでもお見積りできます<br><span class="todo">LINE公式アカウントのURL 要確認</span></span>
+        <span class="s">友だち追加して、そのままチャットで。お車の写真を送っていただくだけでもお見積りできます</span>
       </a>
       <a href="tel:0248762077">
         <span class="k">Tel</span>
         <span class="v">0248-76-2077</span>
-        <span class="s">10:00〜19:00／火曜定休</span>
+        <span class="s">10:00〜18:30／火曜定休</span>
       </a>
       <a href="https://www.instagram.com/carshoppazoo" target="_blank" rel="noopener">
         <span class="k"><svg class="ic-ig" aria-hidden="true"><use href="#i-ig"/></svg>Instagram</span>
@@ -582,9 +583,7 @@
     <p class="eyebrow anime ani_fade">Instagram</p>
     <h2 class="h2 anime"><span class="ani_txt w1"><span>Instagram</span></span><span class="ja ani_fade d2">@carshoppazoo</span></h2>
     <p class="lead anime ani_slideup d1">入ってきた車や、仕上がった車を載せています。在庫に出す前の一台が先に出ることもあります。</p>
-    <div class="igfeed anime ani_fade d1" id="igfeed">
-      <p class="igwait"><span class="todo">Instagram連携 未設定</span> Behold の Feed ID を入れると、ここに最新の投稿が自動で並びます。</p>
-    </div>
+    <!-- 2026-09-11 店主様回答「リンクだけでよい」→ 投稿を自動で並べる枠（Behold）は外した。戻すなら id="igfeed" の div を置き、pazoo-2609.js の BEHOLD_FEED_ID を入れる -->
     <p class="maplinks anime ani_fade d2">
       <a href="https://www.instagram.com/carshoppazoo" target="_blank" rel="noopener">Instagramで見る</a>
     </p>
@@ -598,22 +597,30 @@
     <table class="info anime ani_slideup d1">
       <tr><th>店名</th><td>CAR SHOP Pazoo（カーショップ パズー）</td></tr>
       <tr><th>会社名</th><td>株式会社FIFTY&#39;S</td></tr>
+      <tr><th>創業</th><td>2006年</td></tr>
       <tr><th>所在地</th><td>〒962-0061 福島県須賀川市北山寺町318（国道4号沿い・須賀川IC5分）</td></tr>
       <tr><th>電話／FAX</th><td>0248-76-2077／0248-94-5080</td></tr>
-      <tr><th>営業時間</th><td>10:00〜19:00／火曜定休</td></tr>
+      <tr><th>営業時間</th><td>10:00〜18:30／火曜定休</td></tr>
       <tr><th>認証</th><td>東北運輸局長 認証工場 4-7761／古物商 251090001093</td></tr>
-      <tr><th>事業内容</th><td>中古車販売・買取／注文販売／車検・整備／板金塗装／コーティング／自動車保険代理店<span class="todo">レンタカー 要確認</span></td></tr>
-      <tr><th>スタッフ</th><td><span class="todo">人数 要確認</span></td></tr>
+      <tr><th>事業内容</th><td>中古車販売・買取／注文販売／車検・整備／板金塗装／コーティング／自動車保険代理店／レンタカー</td></tr>
+      <tr><th>スタッフ</th><td>4名</td></tr>
     </table>
 
     <div class="mapbox anime ani_fade d2">
       <iframe title="CAR SHOP Pazoo の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps?q=%E7%A6%8F%E5%B3%B6%E7%9C%8C%E9%A0%88%E8%B3%80%E5%B7%9D%E5%B8%82%E5%8C%97%E5%B1%B1%E5%AF%BA%E7%94%BA318&hl=ja&z=16&output=embed"></iframe>
+        src="https://www.google.com/maps?cid=9501020526359880822&hl=ja&z=16&output=embed"></iframe>
     </div>
     <p class="maplinks anime ani_fade d2">
-      <a href="https://www.google.com/maps/search/?api=1&query=%E7%A6%8F%E5%B3%B6%E7%9C%8C%E9%A0%88%E8%B3%80%E5%B7%9D%E5%B8%82%E5%8C%97%E5%B1%B1%E5%AF%BA%E7%94%BA318" target="_blank" rel="noopener">Googleマップで開く</a>
+      <a href="https://www.google.com/maps?cid=9501020526359880822" target="_blank" rel="noopener">Googleマップで開く</a>
       <a href="https://www.google.com/maps/dir/?api=1&destination=%E7%A6%8F%E5%B3%B6%E7%9C%8C%E9%A0%88%E8%B3%80%E5%B7%9D%E5%B8%82%E5%8C%97%E5%B1%B1%E5%AF%BA%E7%94%BA318" target="_blank" rel="noopener">ここへの経路を調べる</a>
-      <span class="todo">Googleビジネスプロフィールのリンク 要確認</span>
+      <!-- ★2026-09-10 GBPのリンクは確定（CID 9501020526359880822＝Googleマップの店舗ページ。実見で裏取り済み）。
+           ★「Googleの口コミを見る」ボタンは **まだ出さない**（社長判断 2026-09-10「載せるのはとめて」）。
+             理由＝GBPがまだ店主様のものになっておらず、店舗ページの
+             ウェブサイト欄が goo-net.com・電話がグーネットの転送番号（0078-…）のまま。
+             いま送客すると、自社サイトから他社へ流す導線になる。
+             オーナー確認と3点の修正（サイト・電話・店名）が済んだら、下の1行を出す。
+      <a href="https://www.google.com/maps?cid=9501020526359880822" target="_blank" rel="noopener">Googleの口コミを見る</a>
+      -->
     </p>
   </div>
 </section>
@@ -655,12 +662,12 @@
         〒962-0061 福島県須賀川市北山寺町318<br>
         国道4号沿い・須賀川インターから5分<br>
         <a href="tel:0248762077">0248-76-2077</a>（FAX 0248-94-5080）<br>
-        10:00〜19:00／火曜定休<br>
+        10:00〜18:30／火曜定休<br>
         東北運輸局長 認証工場 4-7761
       </p>
       <p class="f-sns">
         <a href="https://www.instagram.com/carshoppazoo" target="_blank" rel="noopener">Instagram</a>
-        <a href="#">LINE <span class="todo">URL 要確認</span></a>
+        <a href="https://lin.ee/tHzevLr" target="_blank" rel="noopener">LINE</a>
       </p>
     </div>
   </div>
@@ -675,7 +682,7 @@
      PCはヘッダーが画面に貼りついたままなので、狭い画面だけ下に固定バーを出す。 -->
 <div class="fixbar">
   <a class="fx-tel" href="tel:0248762077"><small>お電話</small>0248-76-2077</a>
-  <a class="fx-line" href="#">LINEで相談</a>
+  <a class="fx-line" href="https://lin.ee/tHzevLr" target="_blank" rel="noopener">LINEで相談</a>
 </div>
 
 
