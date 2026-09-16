@@ -36,7 +36,7 @@ const card = (r) => `        <article class="vcard">
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">${esc(r.who.slice(0, 1))}</span>
             <span class="vwho"><b>${esc(r.who)}さん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>${esc(splitCar(r.car))}</span></span>
-            <span class="vstars" aria-label="評価${r.score}">${stars(r.score)}</span>
+            <span class="vstars" role="img" aria-label="評価${r.score}">${stars(r.score)}</span>
             <time>${ym(r.date)}</time>
           </div>
         </article>`;

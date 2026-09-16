@@ -50,7 +50,7 @@ section{padding:96px 0;overflow-x:clip}
 .hd nav a{text-decoration:none;color:var(--ink);opacity:.72;transition:opacity .2s}
 .hd nav a:hover{opacity:1}
 .hd .cta{display:flex;align-items:center;gap:12px;position:relative;z-index:45}
-.hd .line{background:#06C755;color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:10px 15px;border-radius:2px;white-space:nowrap;letter-spacing:.04em}
+.hd .line{background:#06C755;color:#0B2B14;text-decoration:none;font-weight:700;font-size:13px;padding:10px 15px;border-radius:2px;white-space:nowrap;letter-spacing:.04em}
 .hd .tel{font-family:var(--en);font-weight:700;font-size:21px;letter-spacing:.03em;text-decoration:none;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums}
 .hd .tel small{display:block;font-family:var(--ja);font-size:10px;letter-spacing:.1em;color:var(--ink-sub);font-weight:400}
 @media(max-width:1040px){.hd nav{display:none}}
@@ -70,7 +70,7 @@ section{padding:96px 0;overflow-x:clip}
 .drawer a small{font-family:var(--ja);font-size:13px;font-weight:700;letter-spacing:.1em;color:#8d867a;text-transform:none}
 .drawer .drawer-cta{display:flex;gap:14px;align-items:center;margin-top:26px;border:0}
 .drawer .drawer-cta a{border:0;padding:0}
-.drawer .drawer-cta .line{background:#06C755;color:#fff;font-family:var(--ja);font-size:15px;padding:14px 22px;border-radius:2px;letter-spacing:.04em;text-transform:none}
+.drawer .drawer-cta .line{background:#06C755;color:#0B2B14;font-family:var(--ja);font-size:15px;padding:14px 22px;border-radius:2px;letter-spacing:.04em;text-transform:none}
 .drawer .drawer-cta .tel{font-size:26px;color:#fff}
 .hd.nav-open{background:transparent;border-color:transparent;backdrop-filter:none}
 .hd.nav-open .menu span{background:#fff}
@@ -387,6 +387,9 @@ details p{margin:12px 0 0 33px;font-size:14.5px;color:var(--ink-sub)}
 .f-label{margin:0 0 15px;font-family:var(--en);font-size:12px;font-weight:700;letter-spacing:.24em;color:#8d867a;text-transform:uppercase}
 .f-nav{display:grid;align-content:start;gap:10px}
 .f-nav a,.f-sns a,.f-address a{color:#efece5;text-decoration:none}
+/* ★2026-09-17: 住所内の電話リンクだけ、周りの文章と色が同じで見分けがつかなかった
+   （Lighthouse link-in-text-block・比1.89。合格は3:1）。下線を出して区別する。 */
+.f-address a{text-decoration:underline;text-underline-offset:2px}
 .f-nav a:hover,.f-sns a:hover,.f-address a:hover{text-decoration:underline}
 .f-nav a:focus-visible,.f-sns a:focus-visible,.f-address a:focus-visible,.ft-bottom a:focus-visible{outline:2px solid var(--mint);outline-offset:3px}
 .f-address{margin:0 0 16px;color:#b3ada2;line-height:1.95}
@@ -405,7 +408,7 @@ details p{margin:12px 0 0 33px;font-size:14.5px;color:var(--ink-sub)}
     padding:10px 8px;text-decoration:none;font-family:var(--en);font-weight:700;font-size:21px;
     letter-spacing:.03em;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1}
   .fixbar a small{font-family:var(--ja);font-size:10.5px;letter-spacing:.12em;color:var(--ink-sub);font-weight:400}
-  .fixbar .fx-line{background:#06C755;color:#fff;font-family:var(--ja);font-size:16px}
+  .fixbar .fx-line{background:#06C755;color:#0B2B14;font-family:var(--ja);font-size:16px}
   .fixbar a:focus-visible{outline:2px solid var(--wine);outline-offset:-3px}
   body{padding-bottom:66px}/* バーに隠れないよう下を空ける */
   body.no-scroll .fixbar{display:none}/* メニューを開いている間は出さない */

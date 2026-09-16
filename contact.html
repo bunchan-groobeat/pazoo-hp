@@ -6,9 +6,7 @@
 <meta name="robots" content="noindex,nofollow"><!-- STAGING-NOINDEX 2026-09-09 入れ替え公開時に削除 -->
 <title>お問い合わせ | CarShop Pazoo（福島県須賀川市）</title>
 <meta name="description" content="CarShop Pazoo へのお問い合わせ。在庫・お見積り・車検・整備・買取のご相談を承ります。お電話またはお問い合わせフォームよりお気軽にご連絡ください。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
 <link rel="stylesheet" href="assets/css/pazoo-2609.css">
 
 <!-- ▼ SEO強化(head内追加のみ) 2026-07-30 ルイージ -->
@@ -88,8 +86,26 @@
   <div class="wrap">
     <p class="lead">在庫・お見積り・車検・整備・買取など、お気軽にお問い合わせください。お急ぎの場合はお電話（0248-76-2077／10:00〜18:30・火曜定休）が早いです。</p>
     <p class="crumb" style="margin-bottom:30px">いただいた内容は <a href="privacy.html">プライバシーポリシー</a> に沿って管理し、お客様の同意なく第三者へ開示・提供することはありません。</p>
-    <div class="note"><span class="todo">送信先のフォームIDが未設定（Formspree）。このままでは送信できません 要設定</span></div>
-    <form class="cform" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"><dl><dt>お名前<span class="req">必須</span></dt><dd><input type="text" name="お名前" required></dd></dl><dl><dt>ふりがな<span class="req">必須</span></dt><dd><input type="text" name="ふりがな" required></dd></dl><dl><dt>メールアドレス<span class="req">必須</span></dt><dd><input type="email" name="メールアドレス" required></dd></dl><dl><dt>電話番号</dt><dd><input type="tel" name="電話番号"></dd></dl><dl><dt>お問い合わせ内容<span class="req">必須</span></dt><dd><textarea name="内容" rows="7" required></textarea></dd></dl><p class="csubmit"><button type="submit">送信する</button></p></form>
+    <!-- 2026-09-11 社長決定：フォームは受信確認が済むまで出さない（送れないフォームは🔴）。
+         Formspree を pazoo350@hotmail.co.jp で作ったら、ここに <form class="cform" action="https://formspree.io/f/(ID)" method="POST"> を戻す。
+         旧フォームの項目＝お名前・ふりがな・メールアドレス・電話番号・お問い合わせ内容 -->
+    <div class="ct">
+      <a href="https://lin.ee/tHzevLr" target="_blank" rel="noopener">
+        <span class="k">Line</span>
+        <span class="v line-v">LINEで相談</span>
+        <span class="s">友だち追加して、そのままチャットで。お車の写真を送っていただくだけでもお見積りできます</span>
+      </a>
+      <a href="tel:0248762077">
+        <span class="k">Tel</span>
+        <span class="v">0248-76-2077</span>
+        <span class="s">10:00〜18:30／火曜定休</span>
+      </a>
+      <a href="mailto:pazoo350@hotmail.co.jp?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%EF%BC%88%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%88%E3%82%8A%EF%BC%89">
+        <span class="k">Mail</span>
+        <span class="v">pazoo350@hotmail.co.jp</span>
+        <span class="s">お名前・お電話番号・お問い合わせ内容をお書きください。折り返しご連絡します</span>
+      </a>
+    </div>
   </div>
 </section>
 

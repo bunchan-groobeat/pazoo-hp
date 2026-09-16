@@ -6,9 +6,7 @@
 <meta name="robots" content="noindex,nofollow"><!-- STAGING-NOINDEX 2026-09-09 入れ替え公開時に削除 -->
 <title>CarShop Pazoo | 福島県須賀川市の中古車販売・買取・車検・整備・板金塗装</title>
 <meta name="description" content="福島県須賀川市の中古車販売・買取なら CarShop Pazoo（カーショップ パズー）。車検・整備、板金・塗装、カーコーティング、マイカーローン、自動車保険まで、クルマのことはなんでもお任せください。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
 <link rel="stylesheet" href="assets/css/pazoo-2609.css">
 
 <!-- ▼ SEO強化(head内追加のみ・既存の見た目/機能に不触) 2026-07-30 ルイージ追加 ─ 水野谷方式の横展開 =========
@@ -194,10 +192,10 @@
 
 <div class="hero">
   <div class="bg" id="hbg">
-    <img class="slide on p-front" src="assets/img/main/mv-jb64-front.webp" alt="店の前に停めたジムニー（JB64・グレー）">
-    <img class="slide" src="assets/img/main/mv1.webp" alt="Pazoo 店舗外観と展示車">
-    <img class="slide" src="assets/img/main/mv2.webp" alt="展示車の並び">
-    <img class="slide" src="assets/img/main/mv3.webp" alt="店内の待合スペース">
+    <img srcset="assets/img/main/mv-jb64-front-780w.webp 780w, assets/img/main/mv-jb64-front.webp 1477w" sizes="(max-width: 390px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 100vw, 100vw" class="slide on p-front" src="assets/img/main/mv-jb64-front.webp" alt="店の前に停めたジムニー（JB64・グレー）">
+    <img srcset="assets/img/main/mv1-812w.webp 812w, assets/img/main/mv1-1598w.webp 1598w, assets/img/main/mv1.webp 1600w" sizes="(max-width: 390px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 100vw, 100vw" class="slide" src="assets/img/main/mv1.webp" alt="Pazoo 店舗外観と展示車">
+    <img srcset="assets/img/main/mv2-812w.webp 812w, assets/img/main/mv2-1598w.webp 1598w, assets/img/main/mv2.webp 1600w" sizes="(max-width: 390px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 100vw, 100vw" class="slide" src="assets/img/main/mv2.webp" alt="展示車の並び">
+    <img srcset="assets/img/main/mv3-812w.webp 812w, assets/img/main/mv3-1598w.webp 1598w, assets/img/main/mv3.webp 1600w" sizes="(max-width: 390px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 100vw, 100vw" class="slide" src="assets/img/main/mv3.webp" alt="店内の待合スペース">
     <img class="slide" src="assets/img/main/mv4.webp" alt="仕上がったお車">
   </div>
   <p class="hero-copy">
@@ -205,7 +203,7 @@
     <span class="l2">Pazoo<i>.</i></span>
   </p>
 </div>
-<div class="wrap"><div class="bars" id="bars" role="tablist" aria-label="トップ写真の切り替え">
+<div class="wrap"><div class="bars" id="bars" role="group" aria-label="トップ写真の切り替え">
   <button type="button" class="on" data-i="0" aria-label="1枚目"><span></span></button>
   <button type="button" data-i="1" aria-label="2枚目"><span></span></button>
   <button type="button" data-i="2" aria-label="3枚目"><span></span></button>
@@ -229,7 +227,7 @@
         <a class="stock-link anime ani_fade d2" href="#stock">いまある車を見る</a>
       </div>
       <div class="intro-car anime ani_drivein">
-        <img src="assets/img/main/jimny-cutout.webp" width="1388" height="1018" alt="Pazooで扱う旧型ジムニー。リフトアップして大径タイヤを履いたワインレッドの一台">
+        <img srcset="assets/img/main/jimny-cutout-350w.webp 350w, assets/img/main/jimny-cutout-380w.webp 380w, assets/img/main/jimny-cutout.webp 1388w" sizes="(max-width: 390px) 45vw, (max-width: 768px) 25vw, (max-width: 1280px) 47vw, 766px" src="assets/img/main/jimny-cutout.webp" width="1388" height="1018" alt="Pazooで扱う旧型ジムニー。リフトアップして大径タイヤを履いたワインレッドの一台">
         <p class="cap"><span class="todo">要確認</span> 車種名・年式</p>
       </div>
     </div>
@@ -249,7 +247,7 @@
     </div>
     <p class="lead anime ani_slideup d1">ここに載っているのは、いまある車の一部です。ジムニーは切らさないようにしていますが、載せきれていない車もあります。気になる一台があれば、LINEか電話でお尋ねください。国道4号沿い、須賀川インターから5分。寄っていただければ、残りもまとめてご覧いただけます。写真を押すと詳しいページが開きます。</p>
     <div class="railbox anime ani_slideup d2">
-      <div class="rail" id="rail" tabindex="0" aria-label="在庫一覧（横にスクロールします）"></div>
+      <div class="rail" id="rail" role="region" tabindex="0" aria-label="在庫一覧（横にスクロールします）"></div>
       <button type="button" class="rail-hint" id="railHint" aria-label="在庫を次へ送る">→</button>
     </div>
     <div class="railctl anime ani_fade d2">
@@ -337,7 +335,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">た</span>
             <span class="vwho"><b>たーじいさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>日産 ノート</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2024年6月</time>
           </div>
         </article>
@@ -347,7 +345,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">ゆ</span>
             <span class="vwho"><b>ゆっぴーさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>トヨタ ハイラックスサーフ</span></span>
-            <span class="vstars" aria-label="評価4.5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st half" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価4.5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st half" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2021年6月</time>
           </div>
         </article>
@@ -357,7 +355,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">サ</span>
             <span class="vwho"><b>サトウさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>スズキ ジムニー</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2020年11月</time>
           </div>
         </article>
@@ -367,7 +365,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">タ</span>
             <span class="vwho"><b>タカハシさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>スズキ ジムニー</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2019年6月</time>
           </div>
         </article>
@@ -377,7 +375,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">ネ</span>
             <span class="vwho"><b>ネッチンさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>トヨタ ハリアー</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2018年10月</time>
           </div>
         </article>
@@ -387,7 +385,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">ハ</span>
             <span class="vwho"><b>ハライチさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>スバル エクシーガ</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2018年9月</time>
           </div>
         </article>
@@ -397,7 +395,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">み</span>
             <span class="vwho"><b>みぃさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>トヨタ ハイエーストラック</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2018年8月</time>
           </div>
         </article>
@@ -407,7 +405,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">イ</span>
             <span class="vwho"><b>イチサムさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>トヨタ ハイラックスサーフ</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2018年7月</time>
           </div>
         </article>
@@ -417,7 +415,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">M</span>
             <span class="vwho"><b>MASSAOさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>スズキ ジムニーＬ</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2018年5月</time>
           </div>
         </article>
@@ -427,7 +425,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">ミ</span>
             <span class="vwho"><b>ミッチーサッチーさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>トヨタ アクア</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2018年4月</time>
           </div>
         </article>
@@ -437,7 +435,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">た</span>
             <span class="vwho"><b>たーじいさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>日産 ノート</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2024年6月</time>
           </div>
         </article>
@@ -447,7 +445,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">ゆ</span>
             <span class="vwho"><b>ゆっぴーさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>トヨタ ハイラックスサーフ</span></span>
-            <span class="vstars" aria-label="評価4.5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st half" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価4.5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st half" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2021年6月</time>
           </div>
         </article>
@@ -457,7 +455,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">サ</span>
             <span class="vwho"><b>サトウさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>スズキ ジムニー</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2020年11月</time>
           </div>
         </article>
@@ -467,7 +465,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">タ</span>
             <span class="vwho"><b>タカハシさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>スズキ ジムニー</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2019年6月</time>
           </div>
         </article>
@@ -477,7 +475,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">ネ</span>
             <span class="vwho"><b>ネッチンさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>トヨタ ハリアー</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2018年10月</time>
           </div>
         </article>
@@ -487,7 +485,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">ハ</span>
             <span class="vwho"><b>ハライチさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>スバル エクシーガ</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2018年9月</time>
           </div>
         </article>
@@ -497,7 +495,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">み</span>
             <span class="vwho"><b>みぃさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>トヨタ ハイエーストラック</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2018年8月</time>
           </div>
         </article>
@@ -507,7 +505,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">イ</span>
             <span class="vwho"><b>イチサムさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>トヨタ ハイラックスサーフ</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2018年7月</time>
           </div>
         </article>
@@ -517,7 +515,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">M</span>
             <span class="vwho"><b>MASSAOさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>スズキ ジムニーＬ</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2018年5月</time>
           </div>
         </article>
@@ -527,7 +525,7 @@
           <div class="vmeta">
             <span class="avatar" aria-hidden="true">ミ</span>
             <span class="vwho"><b>ミッチーサッチーさん</b><span class="vcar"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg>トヨタ アクア</span></span>
-            <span class="vstars" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <span class="vstars" role="img" aria-label="評価5"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg><svg class="st" aria-hidden="true"><use href="#i-star"/></svg></span>
             <time>2018年4月</time>
           </div>
         </article>
