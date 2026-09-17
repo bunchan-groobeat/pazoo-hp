@@ -21,12 +21,8 @@ RewriteRule ^repair-paint/?$      /repair-paint.html     [R=301,L]
 # --- テーマ由来の重複URL ---
 RewriteRule ^lightning-ja/contact/?$  /contact.html      [R=301,L]
 
-# --- 🔴 社長承認待ち: /used-car/ の行き先 -------------------------
-# 新サイトに中古車在庫ページが無い（在庫は goo-net へリンクする方針）。
-# 太郎の推し = /order.html（注文販売・買取＝いちばん意味が近い）。
-# 別案 = / （トップ）。承認後にどちらかを残して1行にする。
-RewriteRule ^used-car/?$          /order.html            [R=301,L]
-# ---------------------------------------------------------------
+# --- /used-car/ はトップの在庫欄へ（社長決定 2026-09-11）。#を%23にさせないため NE ---
+RewriteRule ^used-car/?$          /#stock                [R=301,NE,L]
 
 RewriteRule ^sitemap-page/?$      /                      [R=301,L]
 
