@@ -31,3 +31,12 @@ assets/img/qr-google-review.png
 # demo/＝旧デザイン案（「要確認」47件・空リンク9件が客に見えていた）／素材/＝元データ（3MBのPNG・本番未参照）
 demo/
 素材/
+# ★2026-09-18 検品：本番9ページから参照されていない候補写真（計1.3MB）。ローカルには残すが配信しない
+assets/img/main/mv-ja-red.webp
+assets/img/main/mv-jb64-inside.webp
+assets/img/main/mv-jb64-rear.webp
+assets/img/main/mv-jb64-detail.webp
+assets/img/service/maintenance.webp
+assets/img/service/order.webp
+assets/img/service/coating.webp
+assets/img/service/repair.webp
