@@ -1,9 +1,10 @@
-# 2026-07-30 ルイージ作成
+# CarShop Pazoo 制作版（確認用）の robots.txt
+# ★2026-09-18 検品：ここは noindex で止めている制作版。お客様の本番（ロリポップ）と
+#   中身が重なるため、クロールを許すと重複コンテンツになる。よって全拒否にする。
+# ★入れ替え公開の当日に `_robots_本番用.txt` の中身へ差し替える（全許可＋AI検索6種の明示許可）。
 # ★注意: GitHub Pagesのプロジェクトページ(サブパス配信)では、この robots.txt はクローラに
 #   「サイトの robots.txt」として認識されない(有効なのはホスト直下 https://bunchan-groobeat.github.io/robots.txt のみ)。
-#   よって Sitemap 行の自動発見は効かない。sitemap は Google Search Console で直接送信すること。
-#   独自ドメイン(サイトがルート配信)へ移行した際に、このファイルがそのまま有効になる。
-User-agent: *
-Allow: /
+#   実際の抑止は各ページの noindex 側が効いている。独自ドメイン(ルート配信)へ移行するとこのファイルが有効になる。
 
-Sitemap: https://bunchan-groobeat.github.io/pazoo-hp/sitemap.xml
+User-agent: *
+Disallow: /
