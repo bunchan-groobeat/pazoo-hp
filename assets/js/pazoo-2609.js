@@ -134,7 +134,7 @@
 
   /* 在庫（2026-09-02 グーネット掲載の実在庫6台） */
   var STOCK = {
-    updated: "2026.09.09",
+    updated: "2026.09.18",
     cars: [
       {name:"スズキ ジムニー ランドベンチャー", year:1997, km:20.3, price:75, shaken:"車検なし", badge:"Jimny", repair:"修復歴あり",
        photo:"https://picture1.goo-net.com/7000902905/30240807/J/70009029053024080700100.jpg",
@@ -145,6 +145,9 @@
       {name:"ジープ・グランドワゴニア", year:1990, km:null, price:407.5, shaken:"車検なし", badge:"Classic", repair:null,
        photo:"https://picture1.goo-net.com/7000902905/30260420/J/70009029053026042000100.jpg",
        url:"https://www.goo-net.com/usedcar/spread/goo/11/700090290530260420001.html"},
+      {name:"トヨタ プリウス S", year:2016, km:15.5, price:120, shaken:"車検なし", badge:null, repair:null,
+       photo:"https://picture1.goo-net.com/7000902905/20260321/J/70009029052026032100100.jpg",
+       url:"https://www.goo-net.com/usedcar/spread/goo/11/700090290520260321001.html"},
       {name:"スズキ キャリイトラック", year:2015, km:2.2, price:77, shaken:"車検2028年6月まで", badge:null, repair:null,
        photo:"https://picture1.goo-net.com/7000902905/30260518/J/70009029053026051800100.jpg",
        url:"https://www.goo-net.com/usedcar/spread/goo/11/700090290530260518001.html"}
