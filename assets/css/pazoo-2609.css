@@ -54,7 +54,7 @@ section{padding:96px 0;overflow-x:clip}
 .hd .tel{font-family:var(--en);font-weight:700;font-size:21px;letter-spacing:.03em;text-decoration:none;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums}
 .hd .tel small{display:block;font-family:var(--ja);font-size:10px;letter-spacing:.1em;color:var(--ink-sub);font-weight:400}
 /* 2026-09-18 社長決定「PCは項目あり・スマホは3本線」：切替を1040→900pxへ。901〜1100pxは文字ナビを詰めて収める（社長のPCはブラウザ上約960px幅） */
-@media(min-width:901px) and (max-width:1100px){.hd .wrap{gap:14px}.hd nav{gap:14px;font-size:13px;letter-spacing:.1em}.hd .brandtxt{display:none}.hd .line{padding:9px 12px}.hd .tel{font-size:19px}}
+@media(min-width:901px) and (max-width:1100px){.hd .wrap{gap:16px}.hd nav{gap:16px;letter-spacing:.1em}.hd .brandtxt{display:none}}
 @media(max-width:900px){.hd nav{display:none}}
 
 /* ── 3本線のメニュー（社長 2026-09-04）。文字ナビが隠れる幅（900px以下・2026-09-18に1040→900へ）で出す ── */

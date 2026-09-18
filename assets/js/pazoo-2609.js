@@ -28,14 +28,15 @@
   })();
 
   /* ロゴ（置いてあれば自動で差し替わる） */
-  var names = ['pazoo-logo.png','pazoo-logo.webp','pazoo-logo.jpg','pazoo-logo.svg','logo.png','logo.webp'];
+  /* 2026-09-18 是正：'素材/' は配信対象外（9/18に配信停止）＝公開URLでロゴが出ず文字に落ちていた。配信される assets/img から読む */
+  var names = ['assets/img/pazoo-logo-v1.webp'];
   function bindLogo(imgId, txtId){
     var img = document.getElementById(imgId), txt = document.getElementById(txtId);
     if (!img) return;
     var i = 0;
     function next(){
       if (i >= names.length) { img.hidden = true; if (txt) txt.hidden = false; return; }
-      img.src = '素材/' + names[i++];
+      img.src = names[i++];
     }
     img.addEventListener('load', function(){ img.hidden = false; if (txt) txt.hidden = true; });
     img.addEventListener('error', next);
