@@ -53,16 +53,18 @@ section{padding:96px 0;overflow-x:clip}
 .hd .line{background:#06C755;color:#0B2B14;text-decoration:none;font-weight:700;font-size:13px;padding:10px 15px;border-radius:2px;white-space:nowrap;letter-spacing:.04em}
 .hd .tel{font-family:var(--en);font-weight:700;font-size:21px;letter-spacing:.03em;text-decoration:none;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums}
 .hd .tel small{display:block;font-family:var(--ja);font-size:10px;letter-spacing:.1em;color:var(--ink-sub);font-weight:400}
-@media(max-width:1040px){.hd nav{display:none}}
+/* 2026-09-18 社長決定「PCは項目あり・スマホは3本線」：切替を1040→900pxへ。901〜1100pxは文字ナビを詰めて収める（社長のPCはブラウザ上約960px幅） */
+@media(min-width:901px) and (max-width:1100px){.hd .wrap{gap:14px}.hd nav{gap:14px;font-size:13px;letter-spacing:.1em}.hd .brandtxt{display:none}.hd .line{padding:9px 12px}.hd .tel{font-size:19px}}
+@media(max-width:900px){.hd nav{display:none}}
 
-/* ── 3本線のメニュー（社長 2026-09-04）。文字ナビが隠れる幅（1040px以下）で出す ── */
+/* ── 3本線のメニュー（社長 2026-09-04）。文字ナビが隠れる幅（900px以下・2026-09-18に1040→900へ）で出す ── */
 .hd .menu{display:none;width:44px;height:44px;border:0;background:transparent;padding:10px;cursor:pointer;flex-direction:column;justify-content:center;gap:6px;margin-left:4px}
 .hd .menu span{display:block;height:2px;background:var(--ink);transition:transform .35s cubic-bezier(.215,.61,.355,1),opacity .25s}
 .hd .menu[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
 .hd .menu[aria-expanded="true"] span:nth-child(2){opacity:0}
 .hd .menu[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
 .hd .menu:focus-visible{outline:2px solid var(--wine);outline-offset:2px}
-@media(max-width:1040px){.hd .menu{display:flex}}
+@media(max-width:900px){.hd .menu{display:flex}}
 .drawer{position:fixed;left:0;right:0;top:0;bottom:0;background:rgba(33,31,27,.97);color:#efece5;z-index:40;padding:110px 28px 40px;display:flex;flex-direction:column;gap:6px;
   opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity .35s ease,transform .35s ease,visibility 0s .35s;overflow:auto}
 .drawer.open{opacity:1;visibility:visible;transform:none;transition:opacity .35s ease,transform .35s ease}

@@ -57,7 +57,7 @@
     menuBtn.addEventListener('click', function(){ setMenu(!drawer.classList.contains('open')); });
     drawer.querySelectorAll('a[href^="#"]').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
     document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setMenu(false); });
-    window.addEventListener('resize', function(){ if (window.innerWidth > 1040) setMenu(false); });
+    window.addEventListener('resize', function(){ if (window.innerWidth > 900) setMenu(false); });
   }
 
   /* ヒーローのスライド（進捗バーが5秒で満ちたら次へ＝Renoca方式） */
