@@ -185,6 +185,7 @@ body.no-scroll{overflow:hidden}
 
 /* ── サービス ── */
 .grid{display:grid;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
+.g1{grid-template-columns:1fr}
 .g2{grid-template-columns:repeat(2,1fr)}
 .g4{grid-template-columns:repeat(4,1fr)}
 @media(max-width:900px){.g4{grid-template-columns:repeat(2,1fr)}.g2{grid-template-columns:1fr}}
