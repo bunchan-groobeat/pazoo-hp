@@ -437,7 +437,7 @@ details p{margin:12px 0 0 33px;font-size:14.5px;color:var(--ink-sub)}
 
 
 /* ===== トップの大きなコピー（写真の中央） ===== */
-.hero-copy{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;margin:0;
+.hero-copy{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;margin:0;font-size:inherit;font-weight:inherit;
   width:92%;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;pointer-events:none}
 /* 差し色は写真ごとに変わる（社長 2026-09-04「写真がかわったら、差し色だけ違う色に」）。JSが --accent を切り替える */
 :root{--accent:#3dffa0}/* 蛍光ミント1色（社長 2026-09-04） */
