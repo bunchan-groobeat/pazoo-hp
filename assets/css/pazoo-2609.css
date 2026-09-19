@@ -592,6 +592,12 @@ details p{margin:12px 0 0 33px;font-size:14.5px;color:var(--ink-sub)}
 .row h3{font-size:21px;font-weight:700;letter-spacing:.03em;margin:6px 0 14px;line-height:1.5}
 .row h3 small{display:block;font-family:var(--en);font-size:12px;font-weight:600;letter-spacing:.2em;
   color:var(--ink-sub);text-transform:uppercase;margin-bottom:7px}
+/* 下層の小見出しに帯を敷いて目立たせる（社長 2026-09-19「タイトル後ろに帯入れて目立つように」）。
+   英字の添え字は帯の外に残し、和文の見出しだけを帯に載せる */
+.row h3{line-height:1.45}
+.row h3 small{margin-bottom:9px}
+.row h3 .band{display:inline-block;background:var(--wine);color:#fff;padding:7px 18px 8px 16px;box-shadow:6px 6px 0 var(--line)}
+@media(max-width:720px){.row h3 .band{padding:6px 14px 7px 12px;font-size:19px}}
 .row p{margin:0 0 14px;color:var(--ink-sub)}
 .row p:last-child{margin-bottom:0}
 
