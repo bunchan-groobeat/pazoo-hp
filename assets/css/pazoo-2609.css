@@ -126,6 +126,16 @@ body.no-scroll{overflow:hidden}
 .stock-link::after{content:"→";font-family:var(--en)}
 .stock-link:hover{color:var(--wine);border-color:var(--wine)}
 .stock-link:focus-visible{outline:2px solid var(--wine);outline-offset:4px}
+/* 在庫の下の「お探しします」（社長 2026-09-19） */
+.stock-search{margin-top:36px;padding:28px 32px;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--wine)}
+.stock-search p{margin:0 0 10px}
+.stock-search .ss-t{font-size:20px;font-weight:700;color:var(--wine);letter-spacing:.06em}
+.stock-search .nb{display:inline-block}/* スマホで「お探しし／ます」と割れないように */
+.ss-act{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;margin:16px 0 0!important}
+.ss-act a{font-size:14px;font-weight:700;letter-spacing:.08em}
+.ss-act .ss-line{display:inline-block;padding:11px 22px;background:#06c755;color:#fff;text-decoration:none;border-radius:999px}
+.ss-act a:focus-visible{outline:2px solid var(--wine);outline-offset:4px}
+@media(max-width:720px){.stock-search{padding:22px 20px}.stock-search .ss-t{font-size:17px}}
 /* スマホは見出しの右の空きに車を入れる（2026-09-04 社長指示）。
    実測（390px）＝見出し2行 87px＋余白26px／"CLASSIC 4WD" の行幅 194px。
    幅42%（=147px）なら文字に9px手前で止まり、高さ108pxは見出しの箱に収まる。 */
